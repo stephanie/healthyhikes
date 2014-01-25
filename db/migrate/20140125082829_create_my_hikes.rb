@@ -5,11 +5,11 @@ class CreateMyHikes < ActiveRecord::Migration
       t.float :distance_in_km
       t.string :distance_category
       t.integer :difficulty
-      t.float :duration
+      t.string :duration
       t.string :elevation_chart
       t.string :start_elevation
       t.string :max_elevation
-      t.string :gain
+      t.string :climb
       t.text :description
       t.string :district
       t.string :trail

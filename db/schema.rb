@@ -13,16 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20140125082829) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "my_hikes", force: true do |t|
     t.string   "hike_name"
     t.float    "distance_in_km"
     t.string   "distance_category"
     t.integer  "difficulty"
-    t.float    "duration"
+    t.string   "duration"
     t.string   "elevation_chart"
     t.string   "start_elevation"
     t.string   "max_elevation"
-    t.string   "gain"
+    t.string   "climb"
     t.text     "description"
     t.string   "district"
     t.string   "trail"

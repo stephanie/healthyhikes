@@ -1,73 +1,101 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Hike name:</strong>
-  <%= @my_hike.hike_name %>
+  <% if @my_hike.hike_name %>
+    <strong>Hike name:</strong>
+    <%= @my_hike.hike_name %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Distance in km:</strong>
-  <%= @my_hike.distance_in_km %>
+  <% if @my_hike.distance_in_km %>
+      <strong>Distance in km:</strong>
+      <%= @my_hike.distance_in_km %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Distance category:</strong>
-  <%= @my_hike.distance_category %>
+  <% if @my_hike.distance_category %>
+    <strong>Distance category:</strong>
+    <%= @my_hike.distance_category %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Difficulty:</strong>
-  <%= @my_hike.difficulty %>
+  <% if @my_hike.difficulty %>
+    <strong>Difficulty:</strong>
+    <%= @my_hike.difficulty %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Duration:</strong>
-  <%= @my_hike.duration %>
+  <% if @my_hike.duration %>
+    <strong>Duration:</strong>
+    <%= @my_hike.duration %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Elevation chart:</strong>
-  <%= @my_hike.elevation_chart %>
+  <% if @my_hike.elevation_chart %>
+    <strong>Elevation chart:</strong>
+    <%= @my_hike.elevation_chart %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Start elevation:</strong>
-  <%= @my_hike.start_elevation %>
+  <% if @my_hike.start_elevation %>
+    <strong>Start elevation:</strong>
+    <%= @my_hike.start_elevation %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Max elevation:</strong>
-  <%= @my_hike.max_elevation %>
+  <% if @my_hike.max_elevation %>
+    <strong>Max elevation:</strong>
+    <%= @my_hike.max_elevation %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Gain:</strong>
-  <%= @my_hike.gain %>
+  <% if @my_hike.climb %>
+    <strong>Climb:</strong>
+    <%= @my_hike.climb %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @my_hike.description %>
+  <% if @my_hike.description %>
+    <strong>Description:</strong>
+    <%= @my_hike.description %>
+  <% end %>
 </p>
 
 <p>
-  <strong>District:</strong>
-  <%= @my_hike.district %>
+  <% if @my_hike.district %>
+    <strong>District:</strong>
+    <%= @my_hike.district %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Trail:</strong>
-  <%= @my_hike.trail %>
+  <% if @my_hike.trail %>
+    <strong>Trail:</strong>
+    <%= @my_hike.trail %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Hike start:</strong>
-  <%= @my_hike.hike_start %>
+  <% if @my_hike.hike_start %>
+    <strong>Hike start:</strong>
+    <%= @my_hike.hike_start %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Hike end:</strong>
-  <%= @my_hike.hike_end %>
+  <% if @my_hike.hike_end %>
+    <strong>Hike end:</strong>
+    <%= @my_hike.hike_end %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_my_hike_path(@my_hike) %> |

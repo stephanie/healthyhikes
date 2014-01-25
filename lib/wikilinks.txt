@@ -1,0 +1,63 @@
+References
+
+^ a b c Cooper, Peter (2009). Beginning Ruby: From Novice to Professional. Beginning from Novice to Professional (2nd ed.). Berkeley: APress. p. 101. ISBN 1-4302-2363-4. "To a lesser extent, Python, LISP, Eiffel, Ada, and C++ have also influenced Ruby." 
+^ a b c d e f Bini, Ola (2007). Practical JRuby on Rails Web 2.0 Projects: Bringing Ruby on Rails to Java. Berkeley: APress. p. 3. ISBN 1-59059-881-4. "It draws primarily on features from Perl, Smalltalk, Python, Lisp, Dylan, and CLU." 
+^ Intro – D Programming Language 1.0 – Digital Mars
+^ Bertels, Christopher (23 February 2011). "Introduction to Fancy". Rubinius blog. Engine Yard. Retrieved 2011-07-21. 
+^ Bini, Ola. "Ioke". Ioke.org. Retrieved 2011-07-21. "inspired by Io, Smalltalk, Lisp and Ruby" 
+^ Burks, Tim. "About Nu™". Programming Nu™. Neon Design Technology, Inc. Retrieved 2011-07-21. 
+^ COPYING in Ruby official source repository
+^ BSDL in Ruby official source repository
+^ About Ruby. Ruby-lang.org (2001-11-29). Retrieved on 2013-07-17.
+^ a b Ruby 1.8.7 is retired
+^ プログラム言語RubyのJIS規格（JIS X 3017）制定について
+^ プログラム言語Ruby、国際規格として承認
+^ http://www.youtube.com/watch?v=oEkJvvGEtB4 Google Tech Talks – Ruby 1.9
+^ a b c http://blog.nicksieger.com/articles/2006/10/20/rubyconf-history-of-ruby History of Ruby
+^ http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/88819 "[FYI: historic] The decisive moment of the language name Ruby. (Re: [ANN] ruby 1.8.1)" — E-mail from Hiroshi Sugihara to ruby-talk
+^ "The Ruby Language FAQ – 1.3 Why the name 'Ruby'?". Ruby-Doc.org. Retrieved April 10, 2012. 
+^ Yukihiro Matsumoto (June 11, 1999). "Re: the name of Ruby?". Ruby-Talk mailing list. http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/394. Retrieved April 10, 2012.
+^ More archeolinguistics: unearthing proto-Ruby
+^ "Re: history of ruby" — E-mail from Yukihiro Matsumoto to ruby-talk
+^ "TUTORIAL – ruby's features" — E-mail From Yukihiro Matsumoto to ruby-list
+^ http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html An Interview with the Creator of Ruby
+^ Web Development: Ruby on Rails. Devarticles.com (2007-03-22). Retrieved on 2013-07-17.
+^ "Ruby 1.9.3 p0 is released". ruby-lang.org. October 31, 2011. Retrieved February 20, 2013. 
+^ "v1_9_3_0/NEWS". Ruby Subversion source repository. ruby-lang.org. September 17, 2011. Retrieved February 20, 2013. 
+^ Ruby 1.9: What to Expect. Slideshow.rubyforge.org. Retrieved on 2013-07-17.
+^ Endoh, Yusuke. (2013-02-24) Ruby 2.0.0-p0 is released. Ruby-lang.org. Retrieved on 2013-07-17.
+^ Endoh, Yusuke. (2013-02-24) Ruby 2.0.0-p0 is released. Ruby-lang.org. Retrieved on 2013-07-17.
+^ "Ruby 2.1.0 is released". December 25, 2013. Retrieved December 26, 2013. 
+^ "Semantic Versioning starting with Ruby 2.1.0". December 21, 2013. Retrieved December 27, 2013. 
+^ The Ruby Programming Language by Yukihiro Matsumoto on 2000-06-12 (informit.com)
+^ a b c The Philosophy of Ruby, A Conversation with Yukihiro Matsumoto, Part I by Bill Venners on 2003-09-29 (Artima Developer)
+^ Ruby Weekly News 23rd – 29th May 2005
+^ An Interview with the Creator of Ruby
+^ Dynamic Productivity with Ruby
+^ martinfowler.com
+^ Ruby – Add class methods at runtime
+^ Blocks and Closures in Ruby
+^ Unicode support in Ruby is too buggy compared to similar programming languages
+^ Britt, James. "Ruby 2.0.0 Standard Library Documentation". Retrieved 2013-12-09. 
+^ Green threads
+^ Ruby FAQ
+^ In Ruby's syntax, statement is just a special case of an expression which cannot appear as an argument (e.g. multiple assignment). http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/1120statement [...] can not be part of expression unless grouped within parentheses. http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2460
+^ Re: semenatics of if/unless/while statement modifiers. Blade.nagaokaut.ac.jp (2005-11-23). Retrieved on 2013-07-17.
+^ Peter Cooper (2010-05-18). "The Why, What, and How of Rubinius 1.0's Release". 
+^ John Lam (2008-05-25). "IronRuby / Rails Question". Retrieved 2008-05-25. 
+^ John Lam (2008-05-30). "IronRuby and Rails". Retrieved 2008-06-01. 
+^ "Iron Ruby on Windows Phone 7". 
+^ "Ruby 1.9 for Symbian OS". Retrieved 2010-07-28. 
+
+Further Reading
+
+Metz, Sandi (September 05, 2012), Practical Object-Oriented Design in Ruby (First ed.), Addison-Wesley, p. 272, ISBN 0-321-72133-0
+McAnally, Jeremy; Arkin, Assaf (March 28, 2009), Ruby in Practice (First ed.), Manning Publications, p. 360, ISBN 1-933988-47-9
+Thomas, Dave; Fowler, Chad; Hunt, Andy (April 28, 2009), Programming Ruby 1.9: The Pragmatic Programmers' Guide (Third ed.), Pragmatic Bookshelf, p. 1000, ISBN 1-934356-08-5
+Black, David (June 4, 2009), The Well-Grounded Rubyist (First ed.), Manning Publications, p. 520, ISBN 1-933988-65-7
+Flanagan, David; Matsumoto, Yukihiro (January 25, 2008), The Ruby Programming Language (First ed.), O'Reilly Media, p. 446, ISBN 0-596-51617-7
+Baird, Kevin (June 8, 2007), Ruby by Example: Concepts and Code (First ed.), No Starch Press, p. 326, ISBN 1-59327-148-4
+Fitzgerald, Michael (May 14, 2007), Learning Ruby (First ed.), O'Reilly Media, p. 255, ISBN 0-596-52986-4
+Cooper, Peter (March 26, 2007), Beginning Ruby: From Novice to Professional (First ed.), Apress, p. 664, ISBN 1-59059-766-4
+Fulton, Hal (November 4, 2006), The Ruby Way (Second ed.), Addison-Wesley, p. 888, ISBN 0-596-52369-6
+Carlson, Lucas; Richardson, Leonard (July 19, 2006), Ruby Cookbook (First ed.), O'Reilly Media, p. 906, ISBN 0-596-52369-6
