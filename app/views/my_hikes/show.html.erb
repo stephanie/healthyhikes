@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hike name:</strong>
+  <%= @my_hike.hike_name %>
+</p>
+
+<p>
+  <strong>Distance in km:</strong>
+  <%= @my_hike.distance_in_km %>
+</p>
+
+<p>
+  <strong>Distance category:</strong>
+  <%= @my_hike.distance_category %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @my_hike.difficulty %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @my_hike.duration %>
+</p>
+
+<p>
+  <strong>Elevation chart:</strong>
+  <%= @my_hike.elevation_chart %>
+</p>
+
+<p>
+  <strong>Start elevation:</strong>
+  <%= @my_hike.start_elevation %>
+</p>
+
+<p>
+  <strong>Max elevation:</strong>
+  <%= @my_hike.max_elevation %>
+</p>
+
+<p>
+  <strong>Gain:</strong>
+  <%= @my_hike.gain %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @my_hike.description %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @my_hike.district %>
+</p>
+
+<p>
+  <strong>Trail:</strong>
+  <%= @my_hike.trail %>
+</p>
+
+<p>
+  <strong>Hike start:</strong>
+  <%= @my_hike.hike_start %>
+</p>
+
+<p>
+  <strong>Hike end:</strong>
+  <%= @my_hike.hike_end %>
+</p>
+
+<%= link_to 'Edit', edit_my_hike_path(@my_hike) %> |
+<%= link_to 'Back', my_hikes_path %>

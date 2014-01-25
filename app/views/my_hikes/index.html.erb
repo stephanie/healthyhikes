@@ -1,0 +1,53 @@
+<h1>Listing my_hikes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hike name</th>
+      <th>Distance in km</th>
+      <th>Distance category</th>
+      <th>Difficulty</th>
+      <th>Duration</th>
+      <th>Elevation chart</th>
+      <th>Start elevation</th>
+      <th>Max elevation</th>
+      <th>Gain</th>
+      <th>Description</th>
+      <th>District</th>
+      <th>Trail</th>
+      <th>Hike start</th>
+      <th>Hike end</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_hikes.each do |my_hike| %>
+      <tr>
+        <td><%= my_hike.hike_name %></td>
+        <td><%= my_hike.distance_in_km %></td>
+        <td><%= my_hike.distance_category %></td>
+        <td><%= my_hike.difficulty %></td>
+        <td><%= my_hike.duration %></td>
+        <td><%= my_hike.elevation_chart %></td>
+        <td><%= my_hike.start_elevation %></td>
+        <td><%= my_hike.max_elevation %></td>
+        <td><%= my_hike.gain %></td>
+        <td><%= my_hike.description %></td>
+        <td><%= my_hike.district %></td>
+        <td><%= my_hike.trail %></td>
+        <td><%= my_hike.hike_start %></td>
+        <td><%= my_hike.hike_end %></td>
+        <td><%= link_to 'Show', my_hike %></td>
+        <td><%= link_to 'Edit', edit_my_hike_path(my_hike) %></td>
+        <td><%= link_to 'Destroy', my_hike, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My hike', new_my_hike_path %>
