@@ -1,6 +1,26 @@
 class MyHikesController < ApplicationController
   before_action :set_my_hike, only: [:show, :edit, :update, :destroy]
 
+  def landingpage
+
+  end 
+
+  def filter
+
+  end
+
+  def search
+
+  end
+
+  def about
+
+  end
+
+  def hike_mode
+
+  end
+
   # GET /my_hikes
   # GET /my_hikes.json
   def index
@@ -10,6 +30,8 @@ class MyHikesController < ApplicationController
   # GET /my_hikes/1
   # GET /my_hikes/1.json
   def show
+    @my_hike = MyHike.find_by(id: params[:id])
+    @map_url = @my_hike.map_url
   end
 
   # GET /my_hikes/new

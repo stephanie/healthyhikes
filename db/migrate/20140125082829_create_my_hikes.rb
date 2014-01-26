@@ -15,6 +15,8 @@ class CreateMyHikes < ActiveRecord::Migration
       t.string :trail
       t.string :hike_start
       t.string :hike_end
+      t.text :mapmyhike_url
+      t.text :map_url
 
       t.timestamps
     end

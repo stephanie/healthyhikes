@@ -18,11 +18,9 @@ class Mapmyhike
       'http://www.mapmyhike.com/hk/yung-shue-wan/7-28-km-yung-shue-to-sok-kwu-route-115572893',
       'http://www.mapmyhike.com/hk/hong-kong/copy-of-twin-peaks-route-25001850']
 
-    #dragon's back hike
-
-    all_urls.each do |h|
+    all_urls.each do |mapmyhike_url|
       
-      hike_page = agent.get(h)
+      hike_page = agent.get(mapmyhike_url)
 
       hike_name = hike_page.at('#page_content h1').text
       distance_in_km = hike_page.at('.number').text
@@ -33,7 +31,8 @@ class Mapmyhike
         hike_name: hike_name, 
         distance_in_km: distance_in_km, 
         climb: climb, 
-        duration: duration
+        duration: duration,
+        mapmyhike_url: mapmyhike_url
       })
     
     end
