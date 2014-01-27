@@ -19,7 +19,12 @@
         </div>
         <div class="route-details">
           <div class="meta">
-            <div class="freshness"><span>72</span>freshness</div> 
+            <div class="freshness">
+              <span>
+                <%= @district.aqi %>
+              </span>
+              freshness
+            </div> 
             <div class="distance">
               <%= @my_hike.distance_in_km %>km
             </div> 
@@ -34,7 +39,7 @@
               <% end %>
             <br />
             <strong>District:</strong>
-              <%= @my_hike.district %>
+              <%= @district.area %>
             <br />
             <br />
             <div class="description">Just a short hop from the crowded districts of Island East, the Dragon’s Back Hike leads its way through breathtaking views of mesmerizing seashores,  sandy beaches and distant islands. Start your way from Shek O Road, close to To Tei Wan Village, and walk along the Dragon’s Back ridge, keeping the beautiful Tai Tam harbour on one side and Big Wave Bay on the other. The hike goes through Shek O Country Park and reaches Shek O Peak (alt. 284m) and Mount Collison (alt. 348m). At the end of this very scenic trail, hikers have the option to take a refreshing dip at Big Wave Bay beach. </div>

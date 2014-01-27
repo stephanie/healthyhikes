@@ -5,6 +5,8 @@ class CreateDistricts < ActiveRecord::Migration
       t.integer :aqi
       t.integer :aqhi
       t.string :aqhi_health_risk
+      t.text :aqi_url
+      t.string :aqi_updated_on
 
       t.timestamps
     end

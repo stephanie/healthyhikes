@@ -11,12 +11,12 @@ class CreateMyHikes < ActiveRecord::Migration
       t.string :max_elevation
       t.string :climb
       t.text :description
-      t.string :district
       t.string :trail
       t.string :hike_start
       t.string :hike_end
       t.text :mapmyhike_url
       t.text :map_url
+      t.integer :parent_id
 
       t.timestamps
     end

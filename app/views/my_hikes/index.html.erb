@@ -19,7 +19,12 @@
             <div class="route clearfix">
               <div class="name"><%= my_hike.trail %></div>
               <%= link_to 'Show', my_hike %>
-              <div class="freshness"><span>72</span>freshness</div> 
+              <div class="freshness">
+                <span>
+                  <%= my_hike.parent.aqi %>
+                </span>
+                freshness
+              </div> 
               <div class="distance blue-btn"><%= my_hike.distance_in_km %>km</div> 
               <div class="climb blue-btn"><%= my_hike.climb %></div> 
             </div>
@@ -69,7 +74,6 @@
         <td><%= my_hike.max_elevation %></td>
         <td><%= my_hike.climb %></td>
         <td><%= my_hike.description %></td>
-        <td><%= my_hike.district %></td>
         <td><%= my_hike.trail %></td>
         <td><%= my_hike.hike_start %></td>
         <td><%= my_hike.hike_end %></td>
