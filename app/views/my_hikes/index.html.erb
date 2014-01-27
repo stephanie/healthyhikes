@@ -14,7 +14,7 @@
 
     <main>
       <div id="routes">
-        <% @my_hikes.each do |my_hike| %>
+        <% @my_hikes.sort { |a,b| b.parent.aqi <=> a.parent.aqi }.each do |my_hike| %>
           <div class="route-wrapper">
             <div class="route clearfix">
               <div class="name"><%= my_hike.trail %></div>
