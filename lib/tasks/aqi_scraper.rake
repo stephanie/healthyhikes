@@ -11,5 +11,6 @@ namespace :healthyhikes do
           District.create(district)
         end
       end
+      puts "#{Time.now} - Successfully scraped AQI data!"
     end
 end
