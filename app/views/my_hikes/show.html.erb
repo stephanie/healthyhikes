@@ -22,7 +22,9 @@
           <div class="meta">
             <div class="freshness">
               <span>
-                <%= @district.aqi %>
+                <% if @district.aqi %>
+                  <%= @district.aqi %>
+                <% end %>
               </span>
               freshness
             </div> 
