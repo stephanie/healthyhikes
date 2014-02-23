@@ -1,15 +1,38 @@
 class MyHikesController < ApplicationController
   before_action :set_my_hike, only: [:show, :edit, :update, :destroy]
 
+  def landingpage
+
+  end 
+
+  def filter
+
+  end
+
+  def search
+
+  end
+
+  def about
+
+  end
+
+  def hike_mode
+
+  end
+
   # GET /my_hikes
   # GET /my_hikes.json
   def index
-    @my_hikes = MyHike.all
+    @my_hikes = MyHike.all(include: :parent)
   end
 
   # GET /my_hikes/1
   # GET /my_hikes/1.json
   def show
+    @my_hike = MyHike.find_by(id: params[:id])
+    @map_url = @my_hike.map_url
+    @district = District.find_by(id: @my_hike.parent_id)
   end
 
   # GET /my_hikes/new
@@ -69,6 +92,6 @@ class MyHikesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def my_hike_params
-      params.require(:my_hike).permit(:hike_name, :distance_in_km, :distance_category, :difficulty, :duration, :elevation_chart, :start_elevation, :max_elevation, :gain, :description, :district, :trail, :hike_start, :hike_end)
+      params.require(:my_hike).permit(:hike_name, :distance_in_km, :distance_category, :difficulty, :duration, :elevation_chart, :start_elevation, :max_elevation, :climb, :description, :parent_id, :trail, :hike_start, :hike_end)
     end
 end

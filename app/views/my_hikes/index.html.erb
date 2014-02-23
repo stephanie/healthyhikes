@@ -1,3 +1,41 @@
+<div class="container">
+  <div id="screen">
+    
+    <header class="clearfix">
+      <div id="actions">
+        <a href="/about" class="action" id="action-question">question</a>
+        <a href="#" class="action" id="action-star">star</a>
+        <a href="/filter" class="action" id="action-filter">filter</a>
+        <a href="/search" class="action" id="action-search">search</a>
+      </div>
+      <div id="day-of-week">Sunday</div>
+      <div id="date">26 Jan 2014</div>
+    </header>
+
+    <main>
+      <div id="routes">
+        <% @my_hikes.sort { |a,b| b.parent.aqi <=> a.parent.aqi if b.parent.aqi }.each do |my_hike| %>
+          <div class="route-wrapper">
+            <div class="route clearfix">
+              <div class="name"><%= my_hike.trail %></div>
+              <%= link_to 'Show', my_hike %>
+              <div class="freshness">
+                <span>
+                  <%= my_hike.parent.aqi %>
+                </span>
+                freshness
+              </div> 
+              <div class="distance blue-btn"><%= my_hike.distance_in_km %>km</div> 
+              <div class="climb blue-btn"><%= my_hike.climb %></div> 
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </main>
+
+  </div>
+</div>
+<!-- 
 <h1>Listing my_hikes</h1>
 
 <table>
@@ -34,9 +72,8 @@
         <td><%= my_hike.elevation_chart %></td>
         <td><%= my_hike.start_elevation %></td>
         <td><%= my_hike.max_elevation %></td>
-        <td><%= my_hike.gain %></td>
+        <td><%= my_hike.climb %></td>
         <td><%= my_hike.description %></td>
-        <td><%= my_hike.district %></td>
         <td><%= my_hike.trail %></td>
         <td><%= my_hike.hike_start %></td>
         <td><%= my_hike.hike_end %></td>
@@ -51,3 +88,4 @@
 <br>
 
 <%= link_to 'New My hike', new_my_hike_path %>
+ -->

@@ -37,3 +37,7 @@ gem 'nokogiri'
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'whenever'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'rails_12factor', group: :production

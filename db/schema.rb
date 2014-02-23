@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125082829) do
+ActiveRecord::Schema.define(version: 20140126044847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "districts", force: true do |t|
+    t.string   "area"
+    t.integer  "aqi"
+    t.integer  "aqhi"
+    t.string   "aqhi_health_risk"
+    t.text     "aqi_url"
+    t.string   "aqi_updated_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "my_hikes", force: true do |t|
     t.string   "hike_name"
@@ -27,10 +38,12 @@ ActiveRecord::Schema.define(version: 20140125082829) do
     t.string   "max_elevation"
     t.string   "climb"
     t.text     "description"
-    t.string   "district"
     t.string   "trail"
     t.string   "hike_start"
     t.string   "hike_end"
+    t.text     "mapmyhike_url"
+    t.text     "map_url"
+    t.integer  "parent_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

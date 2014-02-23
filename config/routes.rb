@@ -1,6 +1,12 @@
 Healthyhikes::Application.routes.draw do
   resources :my_hikes
 
+  get '/', to: 'my_hikes#landingpage'
+  get '/filter', to: 'my_hikes#filter'
+  get '/search', to: 'my_hikes#search'
+  get '/about', to: 'my_hikes#about'
+  get '/hike_mode', to: 'my_hikes#hike_mode'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
