@@ -36,6 +36,7 @@ gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'awesome_print'
 end
 
 gem 'whenever'
