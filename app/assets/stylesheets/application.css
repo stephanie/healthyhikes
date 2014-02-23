@@ -168,10 +168,11 @@ main #routes .route-wrapper .route .name {
 main #routes .route-wrapper .route .freshness {
   position: absolute;
   bottom: 0px;
+  font-size: 24px;
 }
 
 main #routes .route-wrapper .route .freshness span {
-  font-size: 52px;
+  font-size: 70px;
 }
 
 main #routes .route-wrapper .route .blue-btn {
@@ -238,7 +239,7 @@ main .route-details .meta .freshness {
 }
 
 main .route-details .meta .freshness span {
-  font-size: 52px;
+  font-size: 70px;
   display: block;
   line-height: 52px;
 }

@@ -1,0 +1,363 @@
+
+---
+districts:
+  columns:
+  - id
+  - area
+  - aqi
+  - aqhi
+  - aqhi_health_risk
+  - aqi_url
+  - aqi_updated_on
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Tap Mun
+    - '74'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/tapmun/
+    - 
+    - '2014-01-28 18:00:08.598595'
+    - '2014-01-31 07:00:37.798646'
+  - - '2'
+    - Central/Western
+    - '77'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/central/western/
+    - 
+    - '2014-01-28 18:00:08.605942'
+    - '2014-01-31 07:00:37.814634'
+  - - '3'
+    - Central
+    - '76'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/central/
+    - 
+    - '2014-01-28 18:00:08.608637'
+    - '2014-01-31 07:00:37.820213'
+  - - '4'
+    - Causeway Bay
+    - '74'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/causewaybay/
+    - 
+    - '2014-01-28 18:00:08.61126'
+    - '2014-01-31 06:00:18.927221'
+  - - '5'
+    - Mong Kok
+    - '90'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/mongkok/
+    - 
+    - '2014-01-28 18:00:08.613504'
+    - '2014-01-31 07:00:37.830216'
+  - - '6'
+    - Sham Shui Po
+    - '80'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/shamshuipo/
+    - 
+    - '2014-01-28 18:00:08.616079'
+    - '2014-01-31 07:00:37.836656'
+  - - '7'
+    - Kwai Chung
+    - '72'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/kwaichung/
+    - 
+    - '2014-01-28 18:00:08.618304'
+    - '2014-01-31 07:00:37.841019'
+  - - '8'
+    - Tai Po
+    - '75'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/taipo/
+    - 
+    - '2014-01-28 18:00:08.620463'
+    - '2014-01-31 07:00:37.844954'
+  - - '9'
+    - Sha Tin
+    - '84'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/shatin/
+    - 
+    - '2014-01-28 18:00:08.622584'
+    - '2014-01-31 07:00:37.848878'
+  - - '10'
+    - Eastern
+    - '78'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/eastern/
+    - 
+    - '2014-01-28 18:00:08.624773'
+    - '2014-01-31 07:00:37.852975'
+  - - '11'
+    - Tsuen Wan
+    - '75'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/tsuenwan/
+    - 
+    - '2014-01-28 18:00:08.626891'
+    - '2014-01-31 07:00:37.857477'
+  - - '12'
+    - Kwun Tong
+    - '72'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/kwuntong/
+    - 
+    - '2014-01-28 18:00:08.628922'
+    - '2014-01-31 07:00:37.862676'
+  - - '13'
+    - Yuen Long
+    - '77'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/yuenlong/
+    - 
+    - '2014-01-28 18:00:08.630915'
+    - '2014-01-31 07:00:37.867581'
+  - - '14'
+    - Tuen Mun
+    - '69'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/tuenmun/
+    - 
+    - '2014-01-28 18:00:08.633006'
+    - '2014-01-31 07:00:37.872096'
+  - - '15'
+    - Tung Chung
+    - '69'
+    - 
+    - 
+    - http://aqicn.org/city/hongkong/tungchung/
+    - 
+    - '2014-01-28 18:00:08.634931'
+    - '2014-01-31 06:00:18.953441'
+
+---
+my_hikes:
+  columns:
+  - id
+  - hike_name
+  - distance_in_km
+  - distance_category
+  - difficulty
+  - duration
+  - elevation_chart
+  - start_elevation
+  - max_elevation
+  - climb
+  - description
+  - trail
+  - hike_start
+  - hike_end
+  - mapmyhike_url
+  - map_url
+  - parent_id
+  - created_at
+  - updated_at
+  records: 
+  - - '1'
+    - Dragons Back
+    - '4.89'
+    - Short
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 113.57 m
+    - 
+    - Dragon’s Back (Hong Kong Trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/kowloon/dragons-back-route-175785290
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=175785290%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '10'
+    - '2014-01-28 17:56:21.896762'
+    - '2014-01-30 03:30:55.210065'
+  - - '2'
+    - HK Lantau Giant Buddha and Climbing Lantau Peak
+    - '6.38'
+    - Medium
+    - 
+    - "Best Time: \n\n 2:00:00\n"
+    - 
+    - 
+    - 
+    - 349.66 m
+    - 
+    - Big Buddha to the Road (Lantau Trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/yung-shue-wan/hk-lantau-giant-buddha-and-climbing-lant-route-57512082
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=57512082%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '15'
+    - '2014-01-28 17:56:21.904586'
+    - '2014-01-30 03:30:55.222203'
+  - - '3'
+    - 7.18km hike on 07/07/2013
+    - '7.18'
+    - Medium
+    - 
+    - "Best Time: \n\n 2:45:28\n"
+    - 
+    - 
+    - 
+    - 421.34 m
+    - 
+    - Lion Rock (Maclehose trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/kowloon/7-18km-hike-on-07-07-2013-route-241056795
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=241056795%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '9'
+    - '2014-01-28 17:56:21.906555'
+    - '2014-01-30 03:30:55.228639'
+  - - '4'
+    - Wilson Trail Stage 3
+    - '7.92'
+    - Medium
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 252.91 m
+    - 
+    - Wilson Trail Stage 3
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/kowloon/wilson-trail-stage-3-route-24243666
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=24243666%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '12'
+    - '2014-01-28 17:56:21.908308'
+    - '2014-01-30 03:30:55.235472'
+  - - '5'
+    - 3.9 km HKU to Victoria Peak
+    - '3.86'
+    - Short
+    - 
+    - "Best Time: \n\n 2:00:35\n"
+    - 
+    - 
+    - 
+    - 264.68 m
+    - 
+    - Pok Fu Lam to Victoria Peak (Hong Kong Trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/hong-kong/3-9-km-hku-to-victoria-peak-route-174333746
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=174333746%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '2'
+    - '2014-01-28 17:56:21.909871'
+    - '2014-01-30 03:30:55.240667'
+  - - '6'
+    - Hiking Sunset Peak Tung Chung
+    - '12.89'
+    - Long
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 924.68 m
+    - 
+    - Sunset Peak (Lantau trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/tsuen-wan/hiking-sunset-peak-tung-chung-route-153954425
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=153954425%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '15'
+    - '2014-01-28 17:56:21.911595'
+    - '2014-01-30 03:30:55.245508'
+  - - '7'
+    - MacLehose Trail - Stage3
+    - '9.52'
+    - Long
+    - 
+    - "Best Time: \n\n 2:32:00\n"
+    - 
+    - 
+    - 
+    - 304.07 m
+    - 
+    - Sai Kung (Maclehose Stage 3)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/kowloon/maclehose-trail-stage3-route-20074270
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=20074270%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '1'
+    - '2014-01-28 17:56:21.913219'
+    - '2014-01-30 03:30:55.24989'
+  - - '8'
+    - 3.95km hike on 14/7/13
+    - '3.95'
+    - Short
+    - 
+    - "Best Time: \n\n 2:28:04\n"
+    - 
+    - 
+    - 
+    - 307.14 m
+    - 
+    - Shek Pik to Tai O (Lantau Trail)
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/yung-shue-wan/3-95km-hike-on-14-7-13-route-267311945
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=267311945%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '15'
+    - '2014-01-28 17:56:21.914979'
+    - '2014-01-30 03:30:55.255221'
+  - - '9'
+    - 7.28 km Yung Shue to Sok Kwu
+    - '7.26'
+    - Medium
+    - 
+    - "Best Time: \n\n 3:50:09\n"
+    - 
+    - 
+    - 
+    - 64.41 m
+    - 
+    - 'Yung Shue Wan to Sok Kwu Wan (Lamma) '
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/yung-shue-wan/7-28-km-yung-shue-to-sok-kwu-route-115572893
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=115572893%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '2'
+    - '2014-01-28 17:56:21.916603'
+    - '2014-01-30 03:30:55.261233'
+  - - '10'
+    - Copy Of Twin Peaks
+    - '3.29'
+    - Short
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 6923.18 m
+    - 
+    - Twin Peaks
+    - 
+    - 
+    - http://www.mapmyhike.com/hk/hong-kong/copy-of-twin-peaks-route-25001850
+    - https://maps.google.com/maps?q=http:%2F%2Fwww.mapmyfitness.com%2Fws%2F4p%2Froutes%2Fget_route_kml%3Fconsumer_key%3Db513571b80685c74fa95b7755d916c24048889df4%26route_id=25001850%26display_distance_marker_flag%3D1%26display_custom_marker_flag%3D1%26last_updated=3&output=embed
+    - '4'
+    - '2014-01-28 17:56:21.918121'
+    - '2014-01-30 03:30:55.26853'
