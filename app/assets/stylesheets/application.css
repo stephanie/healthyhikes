@@ -66,7 +66,7 @@ header {
 
 header #actions {
   float: right;
-  margin-top: 6px;
+  margin-top: -12px;
 }
 
 header #actions .action {
@@ -74,17 +74,17 @@ header #actions .action {
   text-indent: -9999px;
   width: 32px;
   height: 32px;
-  background-color: #CCCCCC;
+  background-color: #4D4D4D;
   border-radius: 4px;
   background-size: cover;
 }
 
-header #actions #action-question       { background-image: url('question.png'); }
-header #actions #action-star           { background-image: url('star.png'); }
+header #actions #action-home           { background-image: url('iconhome.png'); }
 header #actions #action-filter         { background-image: url('filter.png'); }
 header #actions #action-search         { background-image: url('search.png'); }
+header #actions #action-question       { background-image: url('question.png'); }
 header #actions #action-question:hover { background-color: #61C4C4; }
-header #actions #action-star:hover     { background-color: #61C4C4; }
+header #actions #action-home:hover     { background-color: #61C4C4; }
 header #actions #action-filter:hover   { background-color: #61C4C4; }
 header #actions #action-search:hover   { background-color: #61C4C4; }
 
@@ -153,7 +153,7 @@ main #routes .route-wrapper {
 }
 
 main #routes .route-wrapper .route {
-  background-color: #85BF60;
+  background-color: #39B54A;
   border-radius: 4px;
   height: 132px;
   padding: 6px;
@@ -163,11 +163,14 @@ main #routes .route-wrapper .route {
 
 main #routes .route-wrapper .route .name {
   font-size: 20px;
+  padding: 5px;
+  width: 195px;
 }
 
 main #routes .route-wrapper .route .freshness {
   position: absolute;
-  bottom: 0px;
+  bottom: 8px;
+  left: 10px;
   font-size: 24px;
 }
 
@@ -179,9 +182,10 @@ main #routes .route-wrapper .route .blue-btn {
   background-color: #1B81AA;
   border-radius: 4px;
   display: inline-block;
-  padding: 3px;
+  padding: 4px;
+  padding-top: 8px;
   position: absolute;
-  width: 46px;
+  width: 55px;
   text-align: center;
 }
 
