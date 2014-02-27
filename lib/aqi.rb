@@ -38,7 +38,7 @@ class Aqi
       })
 
       puts 'Getting ' + aqi_url.split('/').last
-      sleep(30)
+      sleep(60)
     
     end
 
