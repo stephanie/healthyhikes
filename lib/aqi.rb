@@ -36,6 +36,9 @@ class Aqi
         aqi: ( 1 - (aqi.to_f/500) ) * 100, 
         aqi_url: aqi_url
       })
+
+      puts 'Getting ' + aqi_url.split('/').last
+      sleep(60)
     
     end
 

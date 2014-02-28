@@ -10,7 +10,7 @@ class MyHikesController < ApplicationController
   end
 
   def search
-
+    @my_hikes = MyHike.all(include: :parent)
   end
 
   def about

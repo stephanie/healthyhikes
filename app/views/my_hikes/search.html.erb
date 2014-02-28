@@ -1,7 +1,7 @@
   <div class="container">
     <div id="screen">
-        <a href="/my_hikes">
-          <div id="search" class="landing"></div>
-        "</a>
+          <% @my_hikes.each do |my_hike| %>
+          	<a href="" title=""><%= my_hike.hike_name %></a>
+          <% end %>
     </div>
   </div>
