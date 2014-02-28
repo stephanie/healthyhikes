@@ -11,7 +11,9 @@
       <div id="day-of-week">Sunday</div>
       <div id="date">26 Jan 2014</div>
     </header>
-
+    <script>
+      // var abc = '<%= raw @my_hikes.to_json %>';
+    </script>
     <main>
       <div id="routes">
         <% @my_hikes.sort { |a,b| b.parent.aqi <=> a.parent.aqi if b.parent.aqi }.each do |my_hike| %>
@@ -20,7 +22,7 @@
               <div class="name"><%= my_hike.trail %></div>
               <%= link_to 'Show', my_hike %>
               <div class="freshness">
-                <span>
+                <span class="<%= my_hike.parent.area.downcase.split(' ').join('-') %>-aqi">
                   <%= my_hike.parent.aqi %>
                 </span>
                 freshness
