@@ -1,6 +1,31 @@
   <div class="container">
-    <div id="screen">
-        <a href="/my_hikes">
-        <div id="filter" class="landing"></div></a>
+    <div id="screen" class="filterscreen">
+    	<header class="clearfix">
+	      <div id="actions">
+	        <a href="/my_hikes" class="action" id="action-home">home</a>
+	        <a href="/sort" class="action" id="action-sort">sort</a>
+	        <a href="/filter" class="action" id="action-filter">filter</a>
+	        <a href="/about" class="action" id="action-question">question</a>
+	      </div>
+	      <div id="day-of-week">Sunday</div>
+	      <div id="date">26 Jan 2014</div>
+	    </header>
+        <div class="bluecontainer">
+        	<p>Know where you'd like to go? <br> Select from the dropdown menus.</p>
+        	<div id="filterfields">
+        		<ul>
+        			<a href=""><li>Trail
+        			<%= image_tag "go.png", class: "goarrow" %>
+        			</li></a>
+        			<a href=""><li>District 
+        			<%= image_tag "go.png", class: "goarrow" %> </li></a>
+        			<a href=""><li>Start point <%= image_tag "go.png", class: "goarrow" %> </li></a>
+        			<a href=""><li>End point <%= image_tag "go.png", class: "goarrow" %> </li></a>
+        		</ul>
+        	</div>
+        </div>
     </div>
   </div>
+
+
+<!-- <a href="/my_hikes"> -->

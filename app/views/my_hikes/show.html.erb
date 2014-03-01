@@ -1,56 +1,59 @@
 
   <div class="container">
-    <div id="screen">
-      
-      <header class="clearfix">
-        <div id="page-title-wrapper">
-          <div id="page-title"><%= @my_hike.trail %></div>
-          <a href="/my_hikes" class="topnav" id="topnav-left">left</a>
-          <a href="/hike_mode" class="topnav" id="topnav-play">play</a>
-        </div>
-      </header>
+    <div class="hidescroll">
+      <div id="innerscreen">
+        <header class="clearfix">
+          <div id="page-title-wrapper">
+            <div id="page-title"><%= @my_hike.trail %></div>
+            <a href="/my_hikes" class="topnav" id="topnav-left">left</a>
+            <a href="/hike_mode/<%= @my_hike.id %>" class="topnav" id="topnav-play">play</a>
+          </div>
+        </header>
 
-      <main>
-        <div class="map">
-          <iframe width="270px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-          src="<%= @map_url %>">
-          </iframe>
-        </div>
-        <div id="elevationgraph">
-        </div>
-        <div class="route-details">
-          <div class="meta">
-            <div class="freshness">
-              <span>
-                <% if @district.aqi %>
-                  <%= @district.aqi %>
-                <% end %>
-              </span>
-              freshness
-            </div> 
-            <div class="distance">
-              <%= @my_hike.distance_in_km %>km
-            </div> 
+        <main>
+          <div id='gmap' class="map" style="width:200px; height:200px;">
+            <iframe width="270px" height="220px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="<%= @map_url %>">
+            </iframe>
           </div>
-          <div class="body">
-            <strong>Distance Category:</strong>
-              <%= @my_hike.distance_category %>
-            <br />
-            <strong>Duration:</strong> 
-              <% if @my_hike.duration %>
-                <%= @my_hike.duration %>
-              <% end %>
-            <br />
-            <strong>District:</strong>
-              <%= @district.area %>
-            <br />
-            <br />
-            <div class="description">Dummy data // Just a short hop from the crowded districts of Island East, the Dragon’s Back Hike leads its way through breathtaking views of mesmerizing seashores,  sandy beaches and distant islands. Start your way from Shek O Road, close to To Tei Wan Village, and walk along the Dragon’s Back ridge, keeping the beautiful Tai Tam harbour on one side and Big Wave Bay on the other. The hike goes through Shek O Country Park and reaches Shek O Peak (alt. 284m) and Mount Collison (alt. 348m). At the end of this very scenic trail, hikers have the option to take a refreshing dip at Big Wave Bay beach. </div>
-            <div class="tips"><span>Tips: </span>Catch bus 11 from Tung Chung, alight after the bridge over the reservoir. Continue for around an hour and take the first trail on the left after the waterfall.</div>
-            
+  <!--         <div id="elevationgraph">
+          </div> -->
+          <div id="routehidescroll">
+            <div class="route-details">
+              <div class="meta">
+                <div class="freshness">
+                  <span>
+                    <% if @district.aqi %>
+                      <%= @district.aqi %>
+                    <% end %>
+                  </span>
+                  % freshness
+                </div> 
+                <div class="distance">
+                  <%= @my_hike.distance_in_km %>km
+                </div> 
+              </div>
+              <div class="body">
+                <strong>Distance Category:</strong>
+                  <%= @my_hike.distance_category %>
+                <br />
+                <strong>Duration:</strong> 
+                  <% if @my_hike.duration %>
+                    <%= @my_hike.duration %>
+                  <% end %>
+                <br />
+                <strong>District:</strong>
+                  <%= @district.area %>
+                <br />
+                <br />
+                <div class="description">Dummy data // Just a short hop from the crowded districts of Island East, the Dragon’s Back Hike leads its way through breathtaking views of mesmerizing seashores,  sandy beaches and distant islands. Start your way from Shek O Road, close to To Tei Wan Village, and walk along the Dragon’s Back ridge, keeping the beautiful Tai Tam harbour on one side and Big Wave Bay on the other. The hike goes through Shek O Country Park and reaches Shek O Peak (alt. 284m) and Mount Collison (alt. 348m). At the end of this very scenic trail, hikers have the option to take a refreshing dip at Big Wave Bay beach. </div>
+                <div class="tips"><span>Tips: </span>Catch bus 11 from Tung Chung, alight after the bridge over the reservoir. Continue for around an hour and take the first trail on the left after the waterfall.</div>
+                
+              </div>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   </div>
 

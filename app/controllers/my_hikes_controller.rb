@@ -17,8 +17,11 @@ class MyHikesController < ApplicationController
 
   end
 
+  # GET /hike_mode/1
+  # GET /hike_mode/1.json
   def hike_mode
-
+    @my_hike = MyHike.find_by(id: params[:id])
+    @map_url = @my_hike.map_url
   end
 
   # GET /my_hikes
@@ -31,6 +34,7 @@ class MyHikesController < ApplicationController
   # GET /my_hikes/1.json
   def show
     @my_hike = MyHike.find_by(id: params[:id])
+
     @map_url = @my_hike.map_url
     @district = District.find_by(id: @my_hike.parent_id)
   end
