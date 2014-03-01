@@ -217,6 +217,12 @@ header #page-title-wrapper #topnav-play {
   top: -1px;
 }
 
+header .hikemodescreen #page-title-wrapper #page-title {
+  text-align: right;
+}
+
+
+
 /* ROUTES */
 main #routes .route-wrapper {
   background-color: #CCCCCC;
@@ -289,6 +295,12 @@ main #routes .route-wrapper .route .star {
 main .map {
   text-align: center;
 }
+
+main #hikemodemap {
+  margin-left: -15px;
+  margin-right: -10px;
+}
+
 
 main .map iframe {
   margin-top: 15px;
