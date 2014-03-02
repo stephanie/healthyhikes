@@ -13,5 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require aqicn_kimono_scripts
 //= require_tree .
+
+$(function(){
+	var allPanels = $('.accordion > dd').hide();
+	    
+	  $('.accordion > dt > a').click(function() {
+	    allPanels.slideUp();
+	    $(this).parent().next().slideDown();
+	    return false;
+	  });
+})
