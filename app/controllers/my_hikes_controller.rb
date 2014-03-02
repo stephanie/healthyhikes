@@ -55,7 +55,7 @@ class MyHikesController < ApplicationController
   # GET /my_hikes
   # GET /my_hikes.json
   def index
-    fetch_data()
+    # fetch_data()
     @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
