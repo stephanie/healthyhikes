@@ -8,8 +8,9 @@
           <a href="/filter" class="action" id="action-filter">filter</a>
           <a href="/about" class="action" id="action-question">question</a>
         </div>
-        <div id="day-of-week">Sunday</div>
-        <div id="date">26 Jan 2014</div>
+
+        <div id="day-of-week"><%= @date.strftime('%A') %></div>
+        <div id="date"><%= @date.strftime('%d %b %Y') %></div>
       </header>
       <script>
         // var abc = '<%= raw @my_hikes.to_json %>';
@@ -17,21 +18,29 @@
       <main>
         <div id="routes">
           <% @my_hikes.sort { |a,b| b.parent.aqi <=> a.parent.aqi if b.parent.aqi }.each do |my_hike| %>
+
+          <a href="my_hikes/<%=my_hike.id%>" id="viewhike" title="">
             <div class="route-wrapper">
               <div class="route clearfix">
                 <div class="name"><%= my_hike.trail %></div>
-                <%= link_to 'Show', my_hike %>
                 <div class="freshness">
-                  <span class="<%= my_hike.parent.area.downcase.split(' ').join('-') %>-aqi">
+                  <span class="<%= my_hike.parent.area.downcase.sub('/','').split(' ').join('-') %>-aqi">
                     <%= my_hike.parent.aqi %>
                   </span>
-                  % freshness
+                  <span id="freshnesstext">% freshness</span>
                 </div> 
-                <div class="distance blue-btn"><%= my_hike.distance_in_km %>km</div> 
-                <div class="climb blue-btn"><%= my_hike.climb.to_i %>m</div> 
+                <div class="distance blue-btn">
+                  <span class="metalabels">Distance:</span><br>
+                  <%= my_hike.distance_in_km %>km
+                </div> 
+                <div class="climb blue-btn">
+                  <span class="metalabels">Climb:</span><br>
+                  <%= my_hike.climb.to_i %>m
+                </div> 
               </div>
             </div>
-          <% end %>
+          </a>
+            <% end %>
         </div>
       </main>
     </div>

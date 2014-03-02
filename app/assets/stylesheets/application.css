@@ -12,22 +12,28 @@
  *= require_tree .
  */
 
+ /*98D400*/
+ /*39B54A*/
+
 @font-face {
     font-family: 'Miso';
-    src: url('public/fonts/miso-light-webfont.eot');
-    src: url('public/fonts/miso-light-webfont.eot?#iefix'),
-         url('public/fonts/miso-light-webfont.woff') format('woff'),
-         url('public/fonts/miso-light-webfont.ttf') format('truetype'),
-         url('public/fonts/miso-light-webfont.svg#miso_bold_rgregular') format('svg');
-    font-weight: lighter;
+    src: url('/assets/miso-light.eot');
+    src: url('/assets/miso-light.eot?#iefix'),
+         url('/assets/miso-light.woff') format('woff'),
+         url('/assets/miso-light.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
   background-image: url("nexus.png");
   background-repeat: no-repeat;
   background-position: center 40px;
-  color: #333333;
+  color: white;
 }
 
 .container {
@@ -97,7 +103,7 @@ header {
 
 header #actions {
   float: right;
-  margin-top: -16px;
+  margin-top: -17px;
 }
 
 header #actions .action {
@@ -105,10 +111,13 @@ header #actions .action {
   text-indent: -9999px;
   width: 40px;
   height: 51px;
-  background-color: #4D4D4D;
+  background-color: #3C4547;
   border-radius: 4px;
   background-size: cover;
-  margin: 1px;
+  margin: 2px;
+  box-shadow: 2px 2px 4px #7d7d7d; 
+  border-right: 2px solid #9c9c9c;
+  border-bottom: 2px solid #9c9c9c;
 }
 
 header #actions #action-home           
@@ -142,30 +151,23 @@ header #actions #action-question
     background-position: center;
     background-position: bottom;
   }
-header #actions #action-question:hover 
+header #actions #action-question:hover,
+header #actions #action-home:hover,     
+header #actions #action-filter:hover,   
+header #actions #action-sort:hover   
   { 
-    background-color: #61C4C4; 
+    background-color: #3fa7c4; 
   }
-header #actions #action-home:hover     
-  { 
-    background-color: #61C4C4; 
-  }
-header #actions #action-filter:hover   
-  { 
-    background-color: #61C4C4; 
-  }
-header #actions #action-search:hover   
-  { 
-    background-color: #61C4C4; 
-  }
-
 
 header #day-of-week {
   font-size: 28px;
+  color: #4D4D4D;
 }
 
 header #date {
-
+  color: #4D4D4D;
+  font-size: 16px;
+  margin-top: 4px;
 }
 
 header #page-title-wrapper {
@@ -181,6 +183,7 @@ header #page-title-wrapper #page-title {
   font-size: 20px;
   line-height: 22px;
   text-align: center;
+  color: #4D4D4D;
 }
 
 header #page-title-wrapper #page-title .star {
@@ -206,7 +209,7 @@ header #page-title-wrapper .topnav {
 }
 
 header #page-title-wrapper #topnav-left {
-  background-image: url('iconback.png');
+  background-image: url('backbutton.png');
   left: 0px;
   top: -1px;
 }
@@ -225,12 +228,13 @@ header .hikemodescreen #page-title-wrapper #page-title {
 
 /* ROUTES */
 main #routes .route-wrapper {
-  background-color: #CCCCCC;
+  background-color: #dcdcdc;
   border-radius: 4px;
   height: 132px;
   padding: 4px;
   color: white;
   margin-top: 12px;
+  box-shadow: 3px 3px 8px #7d7d7d; 
 }
 
 main #routes .route-wrapper .route {
@@ -244,8 +248,9 @@ main #routes .route-wrapper .route {
 
 main #routes .route-wrapper .route .name {
   font-size: 20px;
-  padding: 5px;
+  padding: 8px 5px;
   width: 165px;
+  line-height: 22px;
 }
 
 main #routes .route-wrapper .route .freshness {
@@ -256,30 +261,44 @@ main #routes .route-wrapper .route .freshness {
 }
 
 main #routes .route-wrapper .route .freshness span {
-  font-size: 70px;
+  font-size: 75px;
+  margin-right: -8px;
+}
+
+main #routes .route-wrapper #freshnesstext {
+  font-size: 20px;
 }
 
 main #routes .route-wrapper .route .blue-btn {
-  background-color: #078590;
-  border-radius: 4px;
+  background-color: #06929f;
+  /*border: 3px solid #4ec5cc;*/
+  border: 2px solid #01b3c3;
+  border-radius: 3px;
   display: inline-block;
-  padding: 4px;
-  padding-top: 8px;
+  padding: 6px 4px;
   position: absolute;
   width: 55px;
   text-align: center;
+  margin-top: 10px;
 }
 
 main #routes .route-wrapper .route .distance {
-  font-size: 18px;
-  top: 8px;
+  font-size: 20px;
+  top: 0px;
   right: 8px;
 }
 
+
 main #routes .route-wrapper .route .climb {
-  font-size: 18px;
-  top: 42px;
+  font-size: 19px;
+  top: 62px;
   right: 8px;
+}
+
+main #routes .route-wrapper .route .metalabels {
+  font-size: 13px;
+  padding-top: -14px;
+  color: #ecedea;
 }
 
 main #routes .route-wrapper .route .star {
@@ -290,7 +309,7 @@ main #routes .route-wrapper .route .star {
   position: absolute;
   right: 18px;
   bottom: 16px;
-}
+} 
 
 main .map {
   text-align: center;
@@ -308,15 +327,14 @@ main .map iframe {
 
 main .route-details {
   margin-top: 8px;
-  background-color: #777777;
+  background-color: #3C4547;
   color: white;
-  font-size: 17px;
-  font-weight: lighter;
-  border-radius: 4px;
+  font-size: 15px;
   padding: 8px;
   height: 200px;
   width: 264px;
   overflow-y:scroll;
+  border: 3px solid #cccccc;
 }
 
 main #routehidescroll {
@@ -327,12 +345,14 @@ main #routehidescroll {
 main .route-details .meta {
   float: right;
   width: 46px;
-  margin-right: 32px;
+  margin-right: 39px;
   margin-left: 3px;
+  margin-bottom: 4px;
 }
 
 main .route-details .meta .freshness {
-  background-color: #39B54A;
+  /*background-color: #39B54A;*/
+  /*background-color: #97D201;*/
   border-radius: 4px;
   display: inline-block;
   padding: 4px;
@@ -341,9 +361,14 @@ main .route-details .meta .freshness {
   text-align: center;
   margin-bottom: 8px;
   color: white;
+  font-family: Miso;
+  border: 2px solid #97D201;
 }
 
-
+strong {
+  /*color: #1eb0e9;*/
+  color: #a1a1a1;
+}
 
 main .route-details .meta .freshness span {
   font-size: 65px;
@@ -353,14 +378,16 @@ main .route-details .meta .freshness span {
 }
 
 main .route-details .meta .distance {
-  background-color: #1B81AA;
+  /*background-color: #1B81AA;*/
+  border: 2px solid #1B81AA;
   border-radius: 4px;
   display: inline-block;
   padding: 3px;
-  width: 72px;
+  width: 75px;
   text-align: center;
   color: white;
   padding-top: 6px;
+  font-family: Miso;
 }
 
 main .route-details .body .description {
@@ -386,23 +413,31 @@ main .route-details .body .description {
   color: #c1c1c1;
 }
 
+#viewhike:hover {
+  color: #05659c;
+}
+
 /* MY HIKES */
 
 
 .bluecontainer {
   width: 99%;
   margin: 0 auto;
-  height: 90%;
+  height: 89%;
   background-color: #00A9BA;
   border-radius: 10px;
   color: white;
   position: relative;
+  border-left: 2px solid #7ed6ef;
+  border-top: 2px solid #7ed6ef;
+  box-shadow: 4px 4px 8px #7d7d7d; 
+  margin-top: 10px;
 }
 
 .bluecontainer p {
   text-align: center;
   padding-top: 18px;
-  margin-top: 14px;
+  margin-top: 3px;
   font-family: Miso;
   font-size: 22px;
   line-height: 22px;
@@ -440,6 +475,7 @@ main .route-details .body .description {
   bottom: 13px;
   border-radius: 5px;
   border: 3px solid #5EC5C3;
+  box-shadow: 2px 2px 6px #707070; 
 }
 
 #go p {

@@ -1,18 +1,7 @@
 
-@font-face {
-    font-family: 'Miso';
-    src: url('public/fonts/miso-light-webfont.eot');
-    src: url('public/fonts/miso-light-webfont.eot?#iefix'),
-         url('public/fonts/miso-light-webfont.woff') format('woff'),
-         url('public/fonts/miso-light-webfont.ttf') format('truetype'),
-         url('public/fonts/miso-light-webfont.svg#miso_bold_rgregular') format('svg');
-    font-weight: lighter;
-    font-style: normal;
-}
-
 body {
   background-color: #fff;
-  color: #333;
+  color: white;
   font-family: 'Miso';
   font-size: 13px;
   line-height: 18px;
@@ -31,13 +20,19 @@ pre {
 }
 
 a {
-  color: #000;
+  color: white;
   &:visited {
     color: white;
+    * {
+      color: white;
+    }
   }
   &:hover {
     color: #0055aa;
-    background-color: #4D4D4D;
+    background-color: #3C4547;
+    * {
+      color: #0055aa;
+    }
   }
 }
 

@@ -6,15 +6,16 @@ class MyHikesController < ApplicationController
   end 
 
   def filter
-
+    @date = Time.now
   end
 
-  def search
+  def sort
+    @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
 
   def about
-
+    @date = Time.now
   end
 
   # GET /hike_mode/1
@@ -27,6 +28,7 @@ class MyHikesController < ApplicationController
   # GET /my_hikes
   # GET /my_hikes.json
   def index
+    @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
 

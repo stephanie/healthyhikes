@@ -7,8 +7,8 @@
 	        <a href="/filter" class="action" id="action-filter">filter</a>
 	        <a href="/about" class="action" id="action-question">question</a>
 	      </div>
-	      <div id="day-of-week">Sunday</div>
-	      <div id="date">26 Jan 2014</div>
+        <div id="day-of-week"><%= @date.strftime('%A') %></div>
+        <div id="date"><%= @date.strftime('%d %b %Y') %></div>
 	    </header>
         <div class="bluecontainer">
         	<p>To sort the hikes another way, <br> click on the field, then click GO! </p>

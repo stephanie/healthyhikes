@@ -28,27 +28,52 @@ Queue.prototype.run = function(cb) {
     })());
     task.apply(task, s);
   }
-  next();
+    next();
 }
 
 Queue.prototype.constructor = Queue;
 
 
+function freshnessfactor(aqi){
+  return Math.floor(( 1 - (parseInt(aqi)/500) ) * 100); 
+}
+
 jQuery(document).ready(function($) {
 
   var q = new Queue();
-  var apis = ['b63qta32', '64o81umu'];
+  
+  var apis = ['26jl2yvk', 
+             '7zzi4q14', 
+             '6gulobkw', 
+             'bqzsf5ic', 
+             'e3c2s5x8', 
+             'bd0v44ne', 
+             'atzhjba4', 
+             '9bopkdlm', 
+             '6dc2e436', 
+             '54vcrjr0', 
+             '9ii6h4vw', 
+             '5cuz4wde', 
+             '7ljienlw',
+             '64o81umu']
+  
+  var qdistricts = ['tap-mun', 'central/western', 'causeway-bay', 'mong-kok', 
+                     'sham-shui-po', 'kwai-chung', 'tai-po', 'sha-tin', 'eastern',
+                     'tsuen-wan', 'kwun-tong', 'yuen-long', 'tung-chung', 'tuen-mun'];
+  var funcs = [];
 
-  window.districts = [];
-
-  for (var index in apis) {
-    q.add(function(next) {
+  function createfunc(i) {
+    return function(next) {
       $.ajax({
-        url: 'http://www.kimonolabs.com/api/' + apis[index],
-        data: {apikey:'5743c698287ec3733666914bbeac3b2f'},
+        url: 'http://www.kimonolabs.com/api/' + apis[i],
+        data: {
+          // kimpath3: qdistricts[i],
+          apikey:'5743c698287ec3733666914bbeac3b2f'
+        },
         type: 'GET',
         dataType: 'JSONP',
         success: function(result) {
+          console.log(apis[i])
           districts.push({
             district_english: result.results.collection3[0].property3,
             district_chinese: result.results.collection3[1].property3,
@@ -61,17 +86,28 @@ jQuery(document).ready(function($) {
         },
         error: next
       });
-    });  
+    }  
   }
 
+  for (var index in apis) {
+    funcs[index] = createfunc(index);
+  }
+
+  window.districts = [];
+
+  for (var index in funcs) {
+    q.add(funcs[index])
+  }
+  
   q.run(function(error) {
     if (error) return alert(error);
 
     districts.forEach(function(dist) {
-      var cn = dist.district_english.toLowerCase().split(' ').join('-'); 
-      console.log(dist);
+      var cn = dist.district_english.toLowerCase().replace('/','').split(' ').join('-'); 
       //this puts the aqi data into div with class of district-name-aqi (i.e. .central-aqi or tung-chung-aqi)
-      $('.' + cn +'-aqi').html(dist.aqi);
+      console.log(cn)
+      ff = freshnessfactor(dist.aqi);
+      $('.' + cn +'-aqi').html(ff);
       //if you want to populate other divs with more data that we've collected, do the same 
       // i.e. $('.' + cn + '-updated-on').html(dist.updated_on); would fill the html inside div with class 
       //district-name-updated-on with the correct data
