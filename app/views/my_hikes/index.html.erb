@@ -22,7 +22,7 @@
           <a href="my_hikes/<%=my_hike.id%>" class="viewhike" title="">
             <div class="route-wrapper" data-aqi="<%= my_hike.parent.aqi %>">
               <div class="route clearfix <%= "aqi-level-" + ((my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
-                <div class="name"><%= my_hike.trail %>, <span><%= my_hike.parent.area %></span></div>
+                <div class="name"><%= my_hike.trail %> <br><span class="districtname"><%= my_hike.parent.area %></span></div>
                 <div class="freshness">
                   <span class="<%= my_hike.parent.area.downcase.sub('/','').split(' ').join('-') %>-aqi">
                     <%= (( 1 - (my_hike.parent.aqi.to_f/300) ) * 100).to_i %>

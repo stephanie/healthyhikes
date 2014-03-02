@@ -237,6 +237,11 @@ main #routes .route-wrapper {
   box-shadow: 3px 3px 8px #7d7d7d; 
 }
 
+main #routes .route-wrapper > div:hover{
+  border: 2px solid #06929F;
+}
+
+
 .route-wrapper .route {
   border-radius: 4px;
   height: 132px;
@@ -249,8 +254,14 @@ main #routes .route-wrapper .route .name {
   font-size: 20px;
   padding: 8px 5px;
   width: 165px;
-  line-height: 22px;
+  line-height: 18px;
 }
+
+main #routes .route-wrapper .districtname {
+  font-size: 18px;
+  color: #dedede;
+}
+
 
 main #routes .route-wrapper .route .freshness {
   position: absolute;
@@ -260,7 +271,7 @@ main #routes .route-wrapper .route .freshness {
 }
 
 main #routes .route-wrapper .route .freshness span {
-  font-size: 75px;
+  font-size: 68px;
   margin-right: -8px;
 }
 
@@ -416,6 +427,8 @@ main .route-details .body .description {
   color: #05659c;
 }
 
+
+
 /* MY HIKES */
 
 
@@ -438,18 +451,18 @@ main .route-details .body .description {
   padding-top: 18px;
   margin-top: 3px;
   font-family: Miso;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 22px;
 }
 
 #sortfields {
   margin: 0 auto;
   width: 85%;
-  height: 73%;
+  height: 67%;
   border: 2px solid white;
   border-radius: 8px;
-
 }
+
 
 #sortfields a {
   text-decoration: none;
@@ -462,6 +475,10 @@ main .route-details .body .description {
   font-size: 22px;
   padding: 20px 1px;
   margin-left: -10px;
+}
+
+#sortfields :hover {
+  color: #0055aa;
 }
 
 #go {
@@ -495,7 +512,7 @@ main .route-details .body .description {
 #filterfields {
   margin: 0 auto;
   width: 85%;
-  height: 73%;
+  height: 68%;
   border: 2px solid white;
   border-radius: 8px;
 }
@@ -514,6 +531,10 @@ main .route-details .body .description {
   margin-left: -15px;
 }
 
+#filterfields :hover {
+    color: #0055aa;
+}
+
 .goarrow {
   position: absolute;
   right: 45px;
@@ -524,25 +545,61 @@ main .route-details .body .description {
   font-size: 30px;
 }
 
+.aboutscreen .bluecontainer {
+  width: 283px;
+  overflow-y: scroll;
+  border-radius: 0;
+}
+
+.aboutscreen #outercontainer {
+  width: 270px;
+  height: 100%;
+  overflow: hidden;
+}
+
 #faqs {
   width: 90%;
   margin: 0 auto;
   border-top: 2px solid white;
-  margin-top: -15px;
+  margin-top: -16px;
 }
 
-#faqs li {
+#faqs dt {
   font-family: Miso;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 20px;
   line-height: 21px;
-  margin-left: -13px;
+  margin-left: 5px;
   margin-right: 5px;
+  border: 2px solid white;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+#faqs dd {
+  font-size: 18px;
+  margin-left: 6px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #dcfcff;
 }
 
 #faqs a {
   text-decoration: none;
 }
 
+#faqs .accordion .colorcode {
+  height: 20px;
+  width: 98%;
+  margin-top: 4px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+#faqs .accordion ol {
+  font-family: Miso;
+  font-size: 18px;
+  margin-left: -20px;
+}
 
 

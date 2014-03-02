@@ -10,28 +10,49 @@
 		<div id="day-of-week"><%= @date.strftime('%A') %></div>
         <div id="date"><%= @date.strftime('%d %b %Y') %></div>
 	    </header>
-	    <div class="bluecontainer">
-	    	<p>FAQ</p>
+	    <div id="outercontainer">
+		    <div class="bluecontainer">
+		    	<p>FAQ</p>
 
-	    	<div id="faqs">
-	    	<dl class="accordion">
+		    	<div id="faqs">
+		    	<dl class="accordion">
 
-				<dt><a href="">What is the Fresh Hikes Finder?</a></dt>
-				<dd>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</dd>
+					<dt><a href="">What is the Fresh Hikes Finder?</a></dt>
+					<dd>The Fresh Hikes Finder wants to help HK hikers maximize the benefits of hiking by choosing routes with the best air quality on any given day or hour. It combines government data on various districts' air quality (AQHI and AQI) and weather, with hiking route data in order to recommend the 'freshest' hikes for any given day or hour. 
 
-				<dt><a href="">That big number on the bottom left of the hike cards - what does it mean and how is it calculated?</a></dt>
-				<dd>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</dd>
+					It is in its current state a web prototype, but The Fresh Hikes Finder will eventually take the form of a mobile app. </dd>
 
-				<dt><a href="">The different colours of the hike cards - what do they mean?</a></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+					<dt><a href="">That big number on the bottom left of the hike cards - what does it mean and how is it calculated?</a></dt>
+					<dd>That's the Freshness Factor - it is a combination of numbers from the Air Quality Health Index (AQHI) and the AQI (Air Quality Index), turned into a percentage and inverted so that the higher the number, the better. This number is updated on an hourly basis for each of the 14 districts. If a hike spans more than one district or air quality measurement station, a weighted average is taken.</dd>
 
-				<dt><a href="">Where are you getting your hiking route data from?</a></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+					<dt><a href="">The different colours of the hike cards - what do they mean?</a></dt>
+					<dd>These colours indicate the Health Risk Levels, as measured and colour coded by the Air Quality Health Index (www.aqhi.gov.hk):
+						<div class="colorcode aqi-level-1"> 1 - Low </div>
+						<div class="colorcode aqi-level-2"> 2 - Low </div>
+						<div class="colorcode aqi-level-3"> 3 - Low </div>
+						<div class="colorcode aqi-level-4"> 4 - Moderate </div>
+						<div class="colorcode aqi-level-5"> 5 - Moderate </div>
+						<div class="colorcode aqi-level-6"> 6 - Moderate </div>
+						<div class="colorcode aqi-level-7"> 7 - High </div>
+						<div class="colorcode aqi-level-8"> 8 - Very high  </div>
+						<div class="colorcode aqi-level-9"> 9 - Very high</div>
+						<div class="colorcode aqi-level-10"> 10 - Very high </div>
+						<div class="colorcode aqi-level-11"> 11 - Serious </div>
+					</dd>
 
-				<dt><a href="">I've seen a few 'coming soons' around the app. Psst - what other features are coming soon?</a></dt>
-				<dd>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</dd>
+					<dt><a href="">Where are you getting your hiking route data from?</a></dt>
+					<dd>The hiking route data is taken from www.mapmyhike.com, a platform and community for monitoring and displays all kinds of hiking route data around HK. The amount of user-generated-data collected is amazing. Hikers, sign up!</dd>
 
-			</dl>
+					<dt><a href="">I've seen a few 'coming soons' around the app. Psst - what other features are coming soon?</a></dt>
+					<dd>
+						<ol>
+							<li>View more hiking routes and cool information such as elevation graphs</li><br>
+							<li> Have more integrated weather data such as UV radiation and temperature</li><br>
+							<li>Star your favourite hikes to keep track of how fresh they are over time</li><br>
+							<li>Sort the hikes by additional fields such as distance or elevation</li><br>
+							<li>Filter the hikes by additional fields such as district, start point, and end point</li></dd>
+				</dl>
+		    </div>
 	    </div>
-    </div>
+	   </div>
   </div>
