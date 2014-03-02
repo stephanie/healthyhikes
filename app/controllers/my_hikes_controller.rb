@@ -55,10 +55,7 @@ class MyHikesController < ApplicationController
   # GET /my_hikes
   # GET /my_hikes.json
   def index
-    Thread.new do
-      fetch_data()
-      ActiveRecord::Base.connection.close
-    end
+    fetch_data()
     @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
