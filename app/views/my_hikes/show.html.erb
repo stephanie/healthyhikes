@@ -24,7 +24,7 @@
                 <div class="freshness">
                   <span>
                     <% if @district.aqi %>
-                      <%= @district.aqi %>
+                       <%= (( 1 - (@district.aqi.to_f/300) ) * 100).to_i %>
                     <% end %>
                   </span>
                   % freshness
