@@ -1,8 +1,34 @@
 class MyHikesController < ApplicationController
   before_action :set_my_hike, only: [:show, :edit, :update, :destroy]
 
-  def landingpage
+  def fetch_data
+    District.all.each do |district|
+      if district.aqi_updated_on < 1.hours.ago
+        begin
+          url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
+          RestClient.get(url) { |response, request, result, &block|
+            if response.code == 200
+              parsed_json = ActiveSupport::JSON.decode(response)
+              # ap parsed_json
+              data = parsed_json['results']
+              # ap data
+              district.update({
+                :aqi => data['collection1'][0]['property1'],
+                :aqhi => data['collection2'][0]['property2'],
+                :aqi_updated_on => data['collection2'][1]['property2'],
+                :temp => data['collection2'][2]['property2']
+                })
+              district.save!
+              ap district             
+              end
+            }
+        rescue SocketError => e
+        end
+      end
+    end
+  end
 
+  def landingpage
   end 
 
   def filter
@@ -28,6 +54,10 @@ class MyHikesController < ApplicationController
   # GET /my_hikes
   # GET /my_hikes.json
   def index
+    Thread.new do
+      fetch_data()
+      ActiveRecord::Base.connection.close
+    end
     @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
