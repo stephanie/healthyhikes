@@ -45,20 +45,9 @@ body {
     overflow: hidden;
 }
 
-#screen {
-    width: 297px;
-    height: 529px;
-    margin: 0 auto;
-    overflow: hidden;
-    word-wrap: break-word;
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    padding: 12px;
-    overflow-y: scroll;
-    }
 
-#innerscreen {
-    width: 311px;
+.innerscreen {
+    width: 308px;
     height: 527px;
     margin: 0 auto;
     overflow: hidden;
@@ -67,6 +56,8 @@ body {
     box-sizing: border-box;
     padding: 12px;
     overflow-y: scroll;
+    margin-left: -2px;
+    padding-right: 24px;
     }
 
 
@@ -79,10 +70,24 @@ body {
 
 
 
-.landingscreen#screen,
-.filterscreen#screen,
-.sortscreen#screen,
-.aboutscreen#screen {
+.screen {
+    width: 298px;
+    height: 529px;
+    margin: 0 auto;
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 12px;
+    overflow-y: scroll;
+    margin-left: 50px;
+    }
+
+
+.landingscreen.screen,
+.filterscreen.screen,
+.sortscreen.screen,
+.aboutscreen.screen {
   overflow-y: hidden;
 }
 
@@ -101,12 +106,13 @@ header {
   position: relative;
 }
 
-header #actions {
+header .actions {
   float: right;
   margin-top: -17px;
+
 }
 
-header #actions .action {
+header .actions .action {
   display: inline-block;
   text-indent: -9999px;
   width: 40px;
@@ -120,7 +126,7 @@ header #actions .action {
   border-bottom: 2px solid #9c9c9c;
 }
 
-header #actions #action-home           
+header .actions #action-home           
   { 
     background-image: url('iconhome.png'); 
     background-size: contain;
@@ -128,14 +134,14 @@ header #actions #action-home
     background-position: bottom;
     background-position-y: 5px;
   }
-header #actions #action-filter         
+header .actions #action-filter         
   { 
     background-image: url('filter.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
   }
-header #actions #action-sort         
+header .actions #action-sort         
   { 
     background-image: url('sort.png'); 
     background-size: contain;
@@ -143,7 +149,7 @@ header #actions #action-sort
     background-position-x: 1px;
     background-position: bottom;
   }
-header #actions #action-question       
+header .actions #action-question       
   { 
     background-image: url('question.png'); 
     background-size: contain;
@@ -151,10 +157,10 @@ header #actions #action-question
     background-position: center;
     background-position: bottom;
   }
-header #actions #action-question:hover,
-header #actions #action-home:hover,     
-header #actions #action-filter:hover,   
-header #actions #action-sort:hover   
+header .actions #action-question:hover,
+header .actions #action-home:hover,     
+header .actions #action-filter:hover,   
+header .actions #action-sort:hover   
   { 
     background-color: #3fa7c4; 
   }
@@ -233,7 +239,7 @@ main #routes .route-wrapper {
   height: 132px;
   padding: 4px;
   color: white;
-  margin-top: 12px;
+  margin-bottom: 12px;
   box-shadow: 3px 3px 8px #7d7d7d; 
 }
 
@@ -333,6 +339,8 @@ main #hikemodemap {
 
 main .map iframe {
   margin-top: 15px;
+  border: 3px solid #cccccc;
+  border-right: 3px solid #e8e8e8;
 }
 
 main .route-details {
@@ -342,13 +350,14 @@ main .route-details {
   font-size: 15px;
   padding: 8px;
   height: 200px;
-  width: 264px;
+  width: 251px;
+  padding-right: 20px;
   overflow-y:scroll;
   border: 3px solid #cccccc;
 }
 
 main #routehidescroll {
-  width: 268px;
+  width: 270px;
   overflow: hidden;
 }
 
@@ -424,7 +433,7 @@ main .route-details .body .description {
   background-size: cover;
 }
 
-#screen.landingscreen {
+.screen#landingscreen {
   background-color: black;
   padding: 0px;
 }
@@ -443,7 +452,7 @@ main .route-details .body .description {
 
 
 .bluecontainer {
-  width: 99%;
+  width: 97%;
   margin: 0 auto;
   height: 89%;
   background-color: #00A9BA;
@@ -453,7 +462,7 @@ main .route-details .body .description {
   border-left: 2px solid #7ed6ef;
   border-top: 2px solid #7ed6ef;
   box-shadow: 4px 4px 8px #7d7d7d; 
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .bluecontainer p {
@@ -612,4 +621,8 @@ main .route-details .body .description {
   margin-left: -20px;
 }
 
+/*layout hacks*/
 
+.hidescroll .innerscreen #indexactions {
+  margin-right: -2px;
+}
