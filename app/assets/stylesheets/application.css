@@ -230,6 +230,10 @@ header .hikemodescreen #page-title-wrapper #page-title {
   text-align: right;
 }
 
+.innerscreen.hikemodescreen {
+  padding-bottom: 0px;
+}
+
 
 
 /* ROUTES */
@@ -332,8 +336,10 @@ main .map {
 }
 
 main #hikemodemap {
-  margin-left: -15px;
+  margin-left: -6px;
   margin-right: -10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -388,7 +394,6 @@ main .route-details .meta .freshness {
 strong {
   /*color: #1eb0e9;*/
   color: #1ebefc;
-  font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
   /*color: #a1a1a1;*/
