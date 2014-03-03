@@ -46,8 +46,8 @@ body {
 }
 
 #screen {
-    width: 296px;
-    height: 527px;
+    width: 299px;
+    height: 529px;
     margin: 0 auto;
     overflow: hidden;
     word-wrap: break-word;
@@ -254,7 +254,7 @@ main #routes .route-wrapper .route .name {
   font-size: 20px;
   padding: 8px 5px;
   width: 165px;
-  line-height: 18px;
+  line-height: 20px;
 }
 
 main #routes .route-wrapper .districtname {
@@ -271,7 +271,7 @@ main #routes .route-wrapper .route .freshness {
 }
 
 main #routes .route-wrapper .route .freshness span {
-  font-size: 68px;
+  font-size: 63px;
   margin-right: -8px;
 }
 
@@ -378,7 +378,11 @@ main .route-details .meta .freshness {
 
 strong {
   /*color: #1eb0e9;*/
-  color: #a1a1a1;
+  color: #1ebefc;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  /*color: #a1a1a1;*/
 }
 
 main .route-details .meta .freshness span {
@@ -418,6 +422,11 @@ main .route-details .body .description {
   width: 270px;
   height: 50px;
   background-size: cover;
+}
+
+#screen.landingscreen {
+  background-color: black;
+  padding: 0px;
 }
 
 .comingsoon {
