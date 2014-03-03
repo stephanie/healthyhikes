@@ -7,8 +7,10 @@
 	        <a href="/filter" class="action" id="action-filter">filter</a>
 	        <a href="/about" class="action" id="action-question">question</a>
 	      </div>
-		<div id="day-of-week"><%= @date.strftime('%A') %></div>
-        <div id="date"><%= @date.strftime('%d %b %Y') %></div>
+	    <a href="/"id="action-landing">
+			<div id="day-of-week"><%= @date.strftime('%A') %></div>
+	        <div id="date"><%= @date.strftime('%d %b %Y') %></div>
+	    </a>
 	    </header>
 	    <div id="outercontainer">
 		    <div class="bluecontainer">
