@@ -17,7 +17,7 @@ class MyHikesController < ApplicationController
                 :aqi => data['collection1'][0]['property1'],
                 :aqhi => data['collection2'][0]['property2'],
                 :aqi_updated_on => data['collection2'][1]['property2'],
-                :temp => data['collection2'][2]['property2']
+                :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
                 })
               district.save!
               ap district             

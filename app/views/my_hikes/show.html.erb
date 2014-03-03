@@ -35,16 +35,18 @@
                 </div> 
               </div>
               <div class="body">
+                <strong>District:</strong>
+                  <%= @district.area %>
                 <strong>Distance Category:</strong>
                   <%= @my_hike.distance_category %>
-                <br />
+                <br/>
                 <strong>Duration:</strong> 
                   <% if @my_hike.duration %>
                     <%= @my_hike.duration %>
                   <% end %>
-                <br />
-                <strong>District:</strong>
-                  <%= @district.area %>
+                <br>
+                <strong>Temperature:</strong>
+                  <%= @district.temp %>°C
                 <div>
                   <strong> Freshness Factor:</strong> <%= @district.aqi_updated_on %>
                 </div>
