@@ -3,7 +3,7 @@ class MyHikesController < ApplicationController
 
   def fetch_data
     District.all.each do |district|
-      if district.aqi_updated_on < 1.hours.ago
+      if district.aqi_updated_on < 0.hours.ago
       # if true
         begin
           url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
