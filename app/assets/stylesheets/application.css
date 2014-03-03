@@ -287,7 +287,7 @@ main #routes .route-wrapper .route .blue-btn {
   display: inline-block;
   padding: 6px 4px;
   position: absolute;
-  width: 55px;
+  width: 57px;
   text-align: center;
   margin-top: 10px;
 }
@@ -372,8 +372,9 @@ main .route-details .meta .freshness {
   margin-bottom: 8px;
   color: white;
   font-family: Miso;
-  border: 2px solid #97D201;
+  /*border: 2px solid #97D201;*/
 }
+
 
 strong {
   /*color: #1eb0e9;*/

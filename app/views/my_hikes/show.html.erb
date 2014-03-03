@@ -21,7 +21,7 @@
           <div id="routehidescroll">
             <div class="route-details">
               <div class="meta">
-                <div class="freshness">
+                <div class="freshness <%= "showaqi-level-" + ((@my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
                   <span>
                     <% if @district.aqi %>
                        <%= (( 1 - (@district.aqi.to_f/300) ) * 100).to_i %>
@@ -30,6 +30,7 @@
                   % freshness
                 </div> 
                 <div class="distance">
+                   <span class="metalabels">Distance:</span><br>
                   <%= @my_hike.distance_in_km %>km
                 </div> 
               </div>
