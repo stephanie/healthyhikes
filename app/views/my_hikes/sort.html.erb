@@ -1,5 +1,5 @@
   <div class="container">
-    <div class="screen" class="filterscreen">
+    <div class="screen" class="sortscreen">
     	<header class="clearfix">
 	      <div class="actions">
 	        <a href="/my_hikes" class="action" id="action-home">home</a>
@@ -13,21 +13,20 @@
         </a>
 	    </header>
         <div class="bluecontainer">
-        	<p><span class="comingsoon">(Coming soon)</span> <br> Know where you'd like to go? <br> Select from the dropdown menus.</p>
-        	<div id="filterfields">
+        	<p><span class="comingsoon">(Coming soon)</span> <br> To sort the hikes another way, <br> click on the field, then click GO! </p>
+        	<div id="sortfields">
         		<ul>
-        			<a href=""><li>Trail
-        			<%= image_tag "go.png", class: "goarrow" %>
-        			</li></a>
-        			<a href=""><li>District 
-        			<%= image_tag "go.png", class: "goarrow" %> </li></a>
-        			<a href=""><li>Start point <%= image_tag "go.png", class: "goarrow" %> </li></a>
-        			<a href=""><li>End point <%= image_tag "go.png", class: "goarrow" %> </li></a>
+        			<a href=""><li>Distance</li></a>
+        			<a href=""><li>Elevation</li></a>
+                    <a href=""><li>Duration (best time)</li></a>
+        			<a href=""><li class="comingsoon">Weekly favourite  <br> (Coming soon)</li></a>
         		</ul>
+        	</div>
+        	<div id="go">
+        		<a href="">
+        		<p>GO!</p>
+        		</a>
         	</div>
         </div>
     </div>
   </div>
-
-
-<!-- <a href="/my_hikes"> -->

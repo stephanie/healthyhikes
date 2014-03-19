@@ -1,1 +1,55 @@
-// my_hikes.less
+ $level-1 : #188A2B;
+ $level-2 : #36B245;
+ $level-3 : #60D758;
+ $level-4 : #DFAB32;
+ $level-5 : #DB7A2B;
+ $level-6 : #C55624;
+ $level-7 : #B22D1F;
+ $level-8 : #7F2823;
+ $level-9 : #612B1B;
+$level-10 : #401C12;
+$level-11 : #000000;
+
+.aqi-level-1 {
+ 	background-color: $level-1;
+}
+
+.aqi-level-2 {
+ 	background-color: $level-2;
+}
+
+.aqi-level-3 {
+ 	background-color: $level-3;
+}
+
+.aqi-level-4 {
+ 	background-color: $level-4;
+}
+
+.aqi-level-5 {
+ 	background-color: $level-5;
+}
+
+.aqi-level-6 {
+ 	background-color: $level-6;
+}
+
+.aqi-level-7 {
+ 	background-color: $level-7;
+}
+
+.aqi-level-8 {
+ 	background-color: $level-8;
+}
+
+.aqi-level-9 {
+ 	background-color: $level-9;
+}
+
+.aqi-level-10 {
+	background-color: $level-10;
+}
+
+.aqi-level-11 {
+	background-color: $level-11;
+}

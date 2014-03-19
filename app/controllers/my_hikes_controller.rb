@@ -1,29 +1,67 @@
 class MyHikesController < ApplicationController
   before_action :set_my_hike, only: [:show, :edit, :update, :destroy]
 
-  def landingpage
+  def fetch_data
+    District.all.each do |district|
+      # if district.aqi_updated_on < 1.hours.ago
+      if true
+        begin
+          url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
+          RestClient.get(url) { |response, request, result, &block|
+            if response.code == 200
+              parsed_json = ActiveSupport::JSON.decode(response)
+              # ap parsed_json
+              data = parsed_json['results']
+              # ap data
+              district.update({
+                :aqi => data['collection1'][0]['property1'],
+                :aqhi => data['collection2'][0]['property2'],
+                :aqi_updated_on => data['collection2'][1]['property2'],
+                :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
+                })
+              district.save!
+              ap district             
+              end
+            }
+        rescue SocketError => e
+        end
+      end
+    end
+  end
 
+  def landingpage
   end 
 
   def filter
-
+    @date = Time.now
   end
 
-  def search
+  def sort
+    @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
 
   def about
-
+    @date = Time.now
   end
 
+  # GET /hike_mode/1
+  # GET /hike_mode/1.json
   def hike_mode
-
+    @my_hike = MyHike.find_by(id: params[:id])
+    @map_url = @my_hike.map_url
   end
 
   # GET /my_hikes
   # GET /my_hikes.json
   def index
+# ---- THIS BE THREADIN ---- # 
+    Thread.new do
+      fetch_data()
+      ActiveRecord::Base.connection.close
+    end
+# ---- THIS BE THREADIN END ---- #
+    @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
   end
 
@@ -31,6 +69,7 @@ class MyHikesController < ApplicationController
   # GET /my_hikes/1.json
   def show
     @my_hike = MyHike.find_by(id: params[:id])
+
     @map_url = @my_hike.map_url
     @district = District.find_by(id: @my_hike.parent_id)
   end

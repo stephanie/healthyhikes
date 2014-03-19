@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require aqicn_kimono_scripts
 //= require_tree .

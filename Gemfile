@@ -45,3 +45,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails_12factor', group: :production
 
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
+
+
+gem 'rb-fsevent'
+gem 'guard-livereload'
+gem 'rest_client'

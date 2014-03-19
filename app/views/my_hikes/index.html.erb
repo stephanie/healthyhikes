@@ -1,40 +1,50 @@
 <div class="container">
-  <div id="screen">
-    
-    <header class="clearfix">
-      <div id="actions">
-        <a href="/my_hikes" class="action" id="action-home">home</a>
-        <a href="/filter" class="action" id="action-filter">filter</a>
-        <a href="/search" class="action" id="action-search">search</a>
-        <a href="/about" class="action" id="action-question">question</a>
-      </div>
-      <div id="day-of-week">Sunday</div>
-      <div id="date">26 Jan 2014</div>
-    </header>
-    <script>
-      // var abc = '<%= raw @my_hikes.to_json %>';
-    </script>
-    <main>
-      <div id="routes">
-        <% @my_hikes.sort { |a,b| b.parent.aqi <=> a.parent.aqi if b.parent.aqi }.each do |my_hike| %>
-          <div class="route-wrapper">
-            <div class="route clearfix">
-              <div class="name"><%= my_hike.trail %></div>
-              <%= link_to 'Show', my_hike %>
-              <div class="freshness">
-                <span class="<%= my_hike.parent.area.downcase.split(' ').join('-') %>-aqi">
-                  <%= my_hike.parent.aqi %>
-                </span>
-                freshness
-              </div> 
-              <div class="distance blue-btn"><%= my_hike.distance_in_km %>km</div> 
-              <div class="climb blue-btn"><%= my_hike.climb.to_i %>m</div> 
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </main>
+  <div class="hidescroll">
+    <div class="innerscreen">
+      <header class="clearfix">
+        <div class="actions" id="indexactions">
+          <a href="/my_hikes" class="action" id="action-home">home</a>
+          <a href="/sort" class="action" id="action-sort">sort</a>
+          <a href="/filter" class="action" id="action-filter">filter</a>
+          <a href="/about" class="action" id="action-question">question</a>
+        </div>
+        <a href="/"id="action-landing">
+        <div id="day-of-week"><%= @date.strftime('%A') %></div>
+        <div id="date"><%= @date.strftime('%d %b %Y') %></div>
+        </a>
+      </header>
+      <script>
+        // var abc = '<%= raw @my_hikes.to_json %>';
+      </script>
+      <main>
+        <div id="routes">
+          <% @my_hikes.sort { |a,b| a.parent.aqi <=> b.parent.aqi if b.parent.aqi }.each do |my_hike| %>
 
+          <a href="my_hikes/<%=my_hike.id%>" class="viewhike" title="">
+            <div class="route-wrapper" data-aqi="<%= my_hike.parent.aqi %>">
+              <div class="route clearfix uppercase <%= "aqi-level-" + ((my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
+                <div class="name"><%= my_hike.trail %> <br><span class="districtname"><%= my_hike.parent.area %></span></div>
+                <div class="freshness">
+                  <span class="<%= my_hike.parent.area.downcase.sub('/','').split(' ').join('-') %>-aqi">
+                    <%= (( 1 - (my_hike.parent.aqi.to_f/300) ) * 100).to_i %>
+                  </span>
+                  <span id="freshnesstext">% freshness</span>
+                </div> 
+                <div class="distance blue-btn">
+                  <span class="metalabels">Distance:</span><br>
+                  <%= my_hike.distance_in_km %>km
+                </div> 
+                <div class="climb blue-btn">
+                  <span class="metalabels">Climb:</span><br>
+                  <%= my_hike.climb.to_i %>m
+                </div> 
+              </div>
+            </div>
+          </a>
+          <% end %>
+        </div>
+      </main>
+    </div>
   </div>
 </div>
 <!-- 

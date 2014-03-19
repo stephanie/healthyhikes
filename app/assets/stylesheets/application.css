@@ -12,22 +12,28 @@
  *= require_tree .
  */
 
+ /*98D400*/
+ /*39B54A*/
+
 @font-face {
     font-family: 'Miso';
-    src: url('public/fonts/miso-bold-webfont.eot');
-    src: url('public/fonts/miso-bold-webfont.eot?#iefix'),
-         url('public/fonts/miso-bold-webfont.woff') format('woff'),
-         url('public/fonts/miso-bold-webfont.ttf') format('truetype'),
-         url('public/fonts/miso-bold-webfont.svg#miso_bold_rgregular') format('svg');
+    src: url('/assets/miso-light.eot');
+    src: url('/assets/miso-light.eot?#iefix'),
+         url('/assets/miso-light.woff') format('woff'),
+         url('/assets/miso-light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
   background-image: url("nexus.png");
   background-repeat: no-repeat;
   background-position: center 40px;
-  color: #333333;
+  color: white;
 }
 
 .container {
@@ -36,10 +42,12 @@ body {
     height: 700px;
     margin: 0 auto;
     margin-top: 97px;
+    overflow: hidden;
 }
 
-#screen {
-    width: 296px;
+
+.innerscreen {
+    width: 308px;
     height: 527px;
     margin: 0 auto;
     overflow: hidden;
@@ -48,7 +56,41 @@ body {
     box-sizing: border-box;
     padding: 12px;
     overflow-y: scroll;
+    margin-left: -2px;
+    padding-right: 24px;
     }
+
+
+.hidescroll {
+  width: 296px;
+  height: 527px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+
+.screen {
+    width: 298px;
+    height: 529px;
+    margin: 0 auto;
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 12px;
+    overflow-y: scroll;
+    margin-left: 50px;
+    }
+
+
+.landingscreen.screen,
+.filterscreen.screen,
+.sortscreen.screen,
+.aboutscreen.screen {
+  overflow-y: hidden;
+}
+
 
 .clearfix:after {  
   content: "";  
@@ -64,49 +106,90 @@ header {
   position: relative;
 }
 
-header #actions {
+header .actions {
   float: right;
-  margin-top: -12px;
+  margin-top: -17px;
+
 }
 
-header #actions .action {
+header .actions .action {
   display: inline-block;
   text-indent: -9999px;
-  width: 32px;
-  height: 32px;
-  background-color: #4D4D4D;
+  width: 40px;
+  height: 51px;
+  background-color: #3C4547;
   border-radius: 4px;
   background-size: cover;
+  margin: 2px;
+  box-shadow: 2px 2px 4px #7d7d7d; 
+  border-right: 2px solid #9c9c9c;
+  border-bottom: 2px solid #9c9c9c;
 }
 
-header #actions #action-home           { background-image: url('iconhome.png'); }
-header #actions #action-filter         { background-image: url('filter.png'); }
-header #actions #action-search         { background-image: url('search.png'); }
-header #actions #action-question       { background-image: url('question.png'); }
-header #actions #action-question:hover { background-color: #61C4C4; }
-header #actions #action-home:hover     { background-color: #61C4C4; }
-header #actions #action-filter:hover   { background-color: #61C4C4; }
-header #actions #action-search:hover   { background-color: #61C4C4; }
+header .actions #action-home           
+  { 
+    background-image: url('iconhome.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-y: 5px;
+  }
+header .actions #action-filter         
+  { 
+    background-image: url('filter.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+header .actions #action-sort         
+  { 
+    background-image: url('sort.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 1px;
+    background-position: bottom;
+  }
+header .actions #action-question       
+  { 
+    background-image: url('question.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: bottom;
+  }
+header .actions #action-question:hover,
+header .actions #action-home:hover,     
+header .actions #action-filter:hover,   
+header .actions #action-sort:hover   
+  { 
+    background-color: #3fa7c4; 
+  }
 
 header #day-of-week {
-  font-size: 28px;
+  font-size: 22px;
+  color: #4D4D4D;
 }
 
 header #date {
-
+  color: #4D4D4D;
+  font-size: 16px;
+  margin-top: 4px;
 }
 
 header #page-title-wrapper {
   height: 32px;
+  margin-top: 3px;
 }
 
 header #page-title-wrapper #page-title {
   position: absolute;
-  width: 208px;
-  left: 32px;
+  margin: 0 auto;
+  width: 185px;
+  left: 43px;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 22px;
   text-align: center;
+  color: #4D4D4D;
 }
 
 header #page-title-wrapper #page-title .star {
@@ -122,9 +205,9 @@ header #page-title-wrapper #page-title .star {
 header #page-title-wrapper .topnav {
   display: inline-block;
   text-indent: -9999px;
-  width: 32px;
-  height: 32px;
-  background-color: #CCCCCC;
+  width: 36px;
+  height: 36px;
+  /*background-color: #CCCCCC;*/
   border-radius: 4px;
   background-size: cover;
   position: absolute;
@@ -132,28 +215,44 @@ header #page-title-wrapper .topnav {
 }
 
 header #page-title-wrapper #topnav-left {
-  background-image: url('pointer.png');
+  background-image: url('backbutton.png');
   left: 0px;
+  top: -1px;
 }
 
 header #page-title-wrapper #topnav-play {
-  background-image: url('pointer.png');
-  background-color: #DA4D4D;
+  background-image: url('fullscreen.png');
   right: 0px;
+  top: -1px;
 }
+
+header .hikemodescreen #page-title-wrapper #page-title {
+  text-align: right;
+}
+
+.innerscreen.hikemodescreen {
+  padding-bottom: 0px;
+}
+
+
 
 /* ROUTES */
 main #routes .route-wrapper {
-  background-color: #CCCCCC;
+  background-color: #dcdcdc;
   border-radius: 4px;
   height: 132px;
   padding: 4px;
   color: white;
-  margin-top: 12px;
+  margin-bottom: 12px;
+  box-shadow: 3px 3px 8px #7d7d7d; 
 }
 
-main #routes .route-wrapper .route {
-  background-color: #39B54A;
+main #routes .route-wrapper > div:hover{
+  border: 2px solid #06929F;
+}
+
+
+.route-wrapper .route {
   border-radius: 4px;
   height: 132px;
   padding: 6px;
@@ -163,9 +262,16 @@ main #routes .route-wrapper .route {
 
 main #routes .route-wrapper .route .name {
   font-size: 20px;
-  padding: 5px;
-  width: 195px;
+  padding: 8px 5px;
+  width: 165px;
+  line-height: 20px;
 }
+
+main #routes .route-wrapper .districtname {
+  font-size: 18px;
+  color: #dedede;
+}
+
 
 main #routes .route-wrapper .route .freshness {
   position: absolute;
@@ -175,30 +281,44 @@ main #routes .route-wrapper .route .freshness {
 }
 
 main #routes .route-wrapper .route .freshness span {
-  font-size: 70px;
+  font-size: 63px;
+  margin-right: -8px;
+}
+
+main #routes .route-wrapper #freshnesstext {
+  font-size: 20px;
 }
 
 main #routes .route-wrapper .route .blue-btn {
-  background-color: #1B81AA;
-  border-radius: 4px;
+  background-color: #06929f;
+  /*border: 3px solid #4ec5cc;*/
+  border: 2px solid #01b3c3;
+  border-radius: 3px;
   display: inline-block;
-  padding: 4px;
-  padding-top: 8px;
+  padding: 6px 4px;
   position: absolute;
-  width: 55px;
+  width: 57px;
   text-align: center;
+  margin-top: 10px;
 }
 
 main #routes .route-wrapper .route .distance {
-  font-size: 18px;
-  top: 8px;
+  font-size: 20px;
+  top: 0px;
   right: 8px;
 }
 
+
 main #routes .route-wrapper .route .climb {
-  font-size: 18px;
-  top: 42px;
+  font-size: 19px;
+  top: 62px;
   right: 8px;
+}
+
+main #routes .route-wrapper .route .metalabels {
+  font-size: 13px;
+  padding-top: -14px;
+  color: #ecedea;
 }
 
 main #routes .route-wrapper .route .star {
@@ -209,52 +329,94 @@ main #routes .route-wrapper .route .star {
   position: absolute;
   right: 18px;
   bottom: 16px;
-}
+} 
 
 main .map {
   text-align: center;
 }
 
+main #hikemodemap {
+  margin-left: -6px;
+  margin-right: -10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+
+main .map iframe {
+  margin-top: 15px;
+  border: 3px solid #cccccc;
+  border-right: 3px solid #e8e8e8;
+}
+
 main .route-details {
-  margin-top: 12px;
-  background-color: #61C4C4;
-  border-radius: 4px;
+  margin-top: 8px;
+  background-color: #3C4547;
+  color: white;
+  font-size: 15px;
   padding: 8px;
-  height: 220px;
+  height: 200px;
+  width: 251px;
+  padding-right: 20px;
   overflow-y:scroll;
+  border: 3px solid #cccccc;
+}
+
+main #routehidescroll {
+  width: 270px;
+  overflow: hidden;
 }
 
 main .route-details .meta {
   float: right;
   width: 46px;
-  margin-right: 32px;
+  margin-right: 39px;
   margin-left: 3px;
+  margin-bottom: 4px;
 }
 
 main .route-details .meta .freshness {
-  background-color: #85BF60;
+  /*background-color: #39B54A;*/
+  /*background-color: #97D201;*/
   border-radius: 4px;
   display: inline-block;
-  padding: 3px;
+  padding: 4px;
   width: 72px;
   height: 72px;
   text-align: center;
   margin-bottom: 8px;
+  color: white;
+  font-family: Miso;
+  /*border: 2px solid #97D201;*/
+}
+
+
+strong {
+  /*color: #1eb0e9;*/
+  color: #1ebefc;
+  font-size: 15px;
+  text-transform: uppercase;
+  /*color: #a1a1a1;*/
 }
 
 main .route-details .meta .freshness span {
-  font-size: 70px;
+  font-size: 65px;
   display: block;
   line-height: 52px;
+  padding-top: 5px;
 }
 
 main .route-details .meta .distance {
-  background-color: #1B81AA;
+  /*background-color: #1B81AA;*/
+  border: 2px solid #1B81AA;
   border-radius: 4px;
   display: inline-block;
   padding: 3px;
-  width: 72px;
+  width: 75px;
   text-align: center;
+  color: white;
+  padding-top: 6px;
+  font-family: Miso;
 }
 
 main .route-details .body .description {
@@ -269,21 +431,203 @@ main .route-details .body .description {
 #landingpage {
   background-image: url('landingpage.png');
 }
-#filter {
-  background-image: url('filterpage.png');
-}
-#search {
-  background-image: url('searchpage.png');
-}
-#about {
-  background-image: url('aboutpage.png');
-}
 #elevationgraph {
   background-image: url('elevationgraph.png');
   width: 270px;
   height: 50px;
   background-size: cover;
 }
-#hike_mode {
-  background-image: url('hikemodepage.png');
+
+.screen#landingscreen {
+  background-color: black;
+  padding: 0px;
+}
+
+.comingsoon {
+  color: #c1c1c1;
+}
+
+.viewhike:hover {
+  color: #05659c;
+}
+
+
+
+/* MY HIKES */
+
+
+.bluecontainer {
+  width: 97%;
+  margin: 0 auto;
+  height: 89%;
+  background-color: #00A9BA;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  border-left: 2px solid #7ed6ef;
+  border-top: 2px solid #7ed6ef;
+  box-shadow: 4px 4px 8px #7d7d7d; 
+  margin-top: 0px;
+}
+
+.bluecontainer p {
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 3px;
+  font-family: Miso;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+#sortfields {
+  margin: 0 auto;
+  width: 85%;
+  height: 67%;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+
+#sortfields a {
+  text-decoration: none;
+}
+
+#sortfields li {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Miso;
+  font-size: 22px;
+  padding: 20px 1px;
+  margin-left: -10px;
+}
+
+#sortfields :hover {
+  color: #0055aa;
+}
+
+#go {
+  width: 80px;
+  height: 44px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 13px;
+  border-radius: 5px;
+  border: 3px solid #5EC5C3;
+  box-shadow: 2px 2px 6px #707070; 
+}
+
+#go p {
+  color: #4D4D4D;
+  font-size: 37px;
+  margin-top: -3px
+}
+
+#go a {
+  text-decoration: none;
+}
+
+#go:hover {
+  color: #0055aa;
+}
+
+
+#filterfields {
+  margin: 0 auto;
+  width: 85%;
+  height: 68%;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+#filterfields a {
+  text-decoration: none;
+}
+
+#filterfields li {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Miso;
+  font-size: 22px;
+  padding: 20px 1px;
+  line-height: 30px;
+  margin-left: -15px;
+}
+
+#filterfields :hover {
+    color: #0055aa;
+}
+
+.goarrow {
+  position: absolute;
+  right: 45px;
+  height: 25px;
+}
+
+.aboutscreen > div > p {
+  font-size: 30px;
+}
+
+.aboutscreen .bluecontainer {
+  width: 283px;
+  overflow-y: scroll;
+  border-radius: 0;
+}
+
+.aboutscreen #outercontainer {
+  width: 270px;
+  height: 100%;
+  overflow: hidden;
+}
+
+#faqs {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 2px solid white;
+  margin-top: -16px;
+}
+
+#faqs dt {
+  font-family: Miso;
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid white;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+#faqs dd {
+  font-size: 18px;
+  margin-left: 6px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+  color: #dcfcff;
+}
+
+#faqs a {
+  text-decoration: none;
+}
+
+#faqs .accordion .colorcode {
+  height: 20px;
+  width: 98%;
+  margin-top: 4px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+#faqs .accordion ol {
+  font-family: Miso;
+  font-size: 18px;
+  margin-left: -20px;
+}
+
+/*layout hacks*/
+
+.hidescroll .innerscreen #indexactions {
+  margin-right: -2px;
 }
