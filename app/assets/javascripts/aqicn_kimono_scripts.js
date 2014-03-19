@@ -73,7 +73,8 @@ jQuery(document).ready(function($) {
       //this puts the aqi data into div with class of district-name-aqi (i.e. .central-aqi or tung-chung-aqi)
       $('.' + cn +'-aqi').html(dist.aqi);
       //if you want to populate other divs with more data that we've collected, do the same 
-      // i.e. $('.' + cn + '-updated-on').html(dist.updated_on); would fill the html inside div with class district-name-updated-on with the correct data
+      // i.e. $('.' + cn + '-updated-on').html(dist.updated_on); would fill the html inside div with class 
+      //district-name-updated-on with the correct data
     });
   });
   
