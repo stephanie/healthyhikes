@@ -3,16 +3,12 @@ class MyHikesController < ApplicationController
 
   def fetch_data
     District.all.each do |district|
-      if district.aqi_updated_on < 1.hours.ago
-      # if true
         begin
           url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
           RestClient.get(url) { |response, request, result, &block|
             if response.code == 200
               parsed_json = ActiveSupport::JSON.decode(response)
-              # ap parsed_json
               data = parsed_json['results']
-              # ap data
               district.update({
                 :aqi => data['collection1'][0]['property1'],
                 :aqhi => data['collection2'][0]['property2'],
@@ -20,7 +16,6 @@ class MyHikesController < ApplicationController
                 :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
                 })
               district.save!
-              # ap district             
               end
             }
         rescue SocketError => e
