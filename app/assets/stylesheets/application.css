@@ -47,7 +47,7 @@ body {
 
 
 .innerscreen {
-    width: 308px;
+    width: 320px;
     height: 527px;
     margin: 0 auto;
     overflow: hidden;
@@ -90,6 +90,12 @@ body {
 .aboutscreen.screen {
   overflow-y: hidden;
 }
+
+.landingscreen.screen {
+  padding: 0;
+
+}
+
 
 
 .clearfix:after {  
@@ -573,12 +579,15 @@ main .route-details .body .description {
   width: 283px;
   overflow-y: scroll;
   border-radius: 0;
+  box-shadow: none;
+  border: none;
 }
 
 .aboutscreen #outercontainer {
   width: 270px;
   height: 100%;
   overflow: hidden;
+  margin-left: 3px;
 }
 
 #faqs {
