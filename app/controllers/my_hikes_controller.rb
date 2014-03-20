@@ -3,23 +3,22 @@ class MyHikesController < ApplicationController
 
   def fetch_data
     District.all.each do |district|
-        begin
-          url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
-          RestClient.get(url) { |response, request, result, &block|
-            if response.code == 200
-              parsed_json = ActiveSupport::JSON.decode(response)
-              data = parsed_json['results']
-              district.update({
-                :aqi => data['collection1'][0]['property1'],
-                :aqhi => data['collection2'][0]['property2'],
-                :aqi_updated_on => data['collection2'][1]['property2'],
-                :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
-                })
-              district.save!
-              end
-            }
-        rescue SocketError => e
-        end
+      begin
+        url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
+        RestClient.get(url) { |response, request, result, &block|
+          if response.code == 200
+            parsed_json = ActiveSupport::JSON.decode(response)
+            data = parsed_json['results']
+            district.update({
+              :aqi => data['collection1'][0]['property1'],
+              :aqhi => data['collection2'][0]['property2'],
+              :aqi_updated_on => data['collection2'][1]['property2'],
+              :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
+              })
+            district.save!
+            end
+          }
+      rescue SocketError => e
       end
     end
   end
