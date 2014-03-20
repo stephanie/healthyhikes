@@ -3,8 +3,8 @@ class MyHikesController < ApplicationController
 
   def fetch_data
     District.all.each do |district|
-      if district.aqi_updated_on < 1.hours.ago
-      # if true
+      # if district.aqi_updated_on < 1.hours.ago
+      if true
         begin
           url = "http://www.kimonolabs.com/api/#{district.api_id}?apikey=5743c698287ec3733666914bbeac3b2f"
           RestClient.get(url) { |response, request, result, &block|
@@ -56,10 +56,10 @@ class MyHikesController < ApplicationController
   # GET /my_hikes.json
   def index
 # ---- THIS BE THREADIN ---- # 
-    # Thread.new do
-    #   fetch_data()
-    #   ActiveRecord::Base.connection.close
-    # end
+    Thread.new do
+      fetch_data()
+      ActiveRecord::Base.connection.close
+    end
 # ---- THIS BE THREADIN END ---- #
     @date = Time.now
     @my_hikes = MyHike.all(include: :parent)
