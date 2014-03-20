@@ -1,154 +1,5 @@
 
 ---
-districts:
-  columns:
-  - id
-  - area
-  - aqi
-  - aqhi
-  - aqhi_health_risk
-  - aqi_url
-  - aqi_updated_on
-  - created_at
-  - updated_at
-  records: 
-  - - '1'
-    - Tap Mun
-    - '74'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/tapmun/
-    - 
-    - '2014-01-28 18:00:08.598595'
-    - '2014-01-31 07:00:37.798646'
-  - - '2'
-    - Central/Western
-    - '77'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/central/western/
-    - 
-    - '2014-01-28 18:00:08.605942'
-    - '2014-01-31 07:00:37.814634'
-  - - '3'
-    - Central
-    - '76'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/central/
-    - 
-    - '2014-01-28 18:00:08.608637'
-    - '2014-01-31 07:00:37.820213'
-  - - '4'
-    - Causeway Bay
-    - '74'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/causewaybay/
-    - 
-    - '2014-01-28 18:00:08.61126'
-    - '2014-01-31 06:00:18.927221'
-  - - '5'
-    - Mong Kok
-    - '90'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/mongkok/
-    - 
-    - '2014-01-28 18:00:08.613504'
-    - '2014-01-31 07:00:37.830216'
-  - - '6'
-    - Sham Shui Po
-    - '80'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/shamshuipo/
-    - 
-    - '2014-01-28 18:00:08.616079'
-    - '2014-01-31 07:00:37.836656'
-  - - '7'
-    - Kwai Chung
-    - '72'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/kwaichung/
-    - 
-    - '2014-01-28 18:00:08.618304'
-    - '2014-01-31 07:00:37.841019'
-  - - '8'
-    - Tai Po
-    - '75'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/taipo/
-    - 
-    - '2014-01-28 18:00:08.620463'
-    - '2014-01-31 07:00:37.844954'
-  - - '9'
-    - Sha Tin
-    - '84'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/shatin/
-    - 
-    - '2014-01-28 18:00:08.622584'
-    - '2014-01-31 07:00:37.848878'
-  - - '10'
-    - Eastern
-    - '78'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/eastern/
-    - 
-    - '2014-01-28 18:00:08.624773'
-    - '2014-01-31 07:00:37.852975'
-  - - '11'
-    - Tsuen Wan
-    - '75'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/tsuenwan/
-    - 
-    - '2014-01-28 18:00:08.626891'
-    - '2014-01-31 07:00:37.857477'
-  - - '12'
-    - Kwun Tong
-    - '72'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/kwuntong/
-    - 
-    - '2014-01-28 18:00:08.628922'
-    - '2014-01-31 07:00:37.862676'
-  - - '13'
-    - Yuen Long
-    - '77'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/yuenlong/
-    - 
-    - '2014-01-28 18:00:08.630915'
-    - '2014-01-31 07:00:37.867581'
-  - - '14'
-    - Tuen Mun
-    - '69'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/tuenmun/
-    - 
-    - '2014-01-28 18:00:08.633006'
-    - '2014-01-31 07:00:37.872096'
-  - - '15'
-    - Tung Chung
-    - '69'
-    - 
-    - 
-    - http://aqicn.org/city/hongkong/tungchung/
-    - 
-    - '2014-01-28 18:00:08.634931'
-    - '2014-01-31 06:00:18.953441'
-
----
 my_hikes:
   columns:
   - id
@@ -181,7 +32,14 @@ my_hikes:
     - 
     - 
     - 113.57 m
-    - 
+    - "Just a short hop from the crowded districts of Island East, the Dragon’s Back
+      Hike leads its way through breathtaking views of mesmerizing seashores,  sandy
+      beaches and distant islands. \nStart your way from Shek O Road, close to To
+      Tei Wan Village, and walk along the Dragon’s Back ridge, keeping the beautiful
+      Tai Tam harbour on one side and Big Wave Bay on the other. The hike goes through
+      Shek O Country Park and reaches Shek O Peak (alt. 284m) and Mount Collison (alt.
+      348m). \n\nAt the end of this very scenic trail, hikers have the option to take
+      a refreshing dip at Big Wave Bay beach."
     - Dragon’s Back (Hong Kong Trail)
     - 
     - 
@@ -200,7 +58,13 @@ my_hikes:
     - 
     - 
     - 349.66 m
-    - 
+    - Lantau Peak is the second highest point in Honk Kong and the trailhead is right
+      next to the Big Buddha. This trail is a great climb to the summit, where the
+      sunrise is a popular destination in the early morning. To the west of the Buddha
+      statue are some Tea Gardens, which have their own plantation. From the Tea Gardens,
+      a 15 minute walk along a hiking trail will bring you to the Wisdom Path. Recently
+      refurbished, here there is a large outdoor installation representing of the
+      Buddhist prayer; the Heart Sutra.
     - Big Buddha to the Road (Lantau Trail)
     - 
     - 
@@ -219,7 +83,14 @@ my_hikes:
     - 
     - 
     - 421.34 m
-    - 
+    - Beginning at the Shatin Pass and intersecting the Maclehose Trail, hike up to
+      Unicorn Ridge and to the path leading over the top of Lion Rock itself. After
+      taking in the views we then have a very steep descent on steps down nearly 200m
+      to rejoin the Maclehose Trail, which we will follow as it climbs another 130m
+      over Beacon Hill (457m). From there it's another long descent, largely on steps,
+      to join the Eagle's Nest Nature Trail, which we will take around the south side
+      of Eagle's Nest, possibly encountering macaques before we reach the end of the
+      hike at the Tai Po Road.
     - Lion Rock (Maclehose trail)
     - 
     - 
@@ -238,7 +109,13 @@ my_hikes:
     - 
     - 
     - 252.91 m
-    - 
+    - "The Wilson Trail Stage 3 ttwists energetically up Devil’s Peak (222 metres).
+      Past the remains of an old hilltop fort, the trail has fine panoramas – out
+      across Tathong Channel to turtle-shaped Tung Lung Chau, over the harbour to
+      its rim of buildings and mountains, and northeastwards to Clear Water Bay Peninsula.\n\nWayside
+      cuttings and fern banks lead us on. Then, just through a small pass, one looks
+      back to the impressive northern face of Devil’s Peak with its sheer forbidding
+      cliffs. "
     - Wilson Trail Stage 3
     - 
     - 
@@ -257,7 +134,13 @@ my_hikes:
     - 
     - 
     - 264.68 m
-    - 
+    - The beginning section is a level vehicular road that can be easily tackled by
+      hikers of all ages. The route circles the mid-slopes of Victoria Peak. You can
+      enjoy beautiful views of Victoria Harbour and Kowloon. Besides, there are many
+      information plates along the way. One of them introduces the origins of Tai
+      Ping Shan and Lo Fung, both Chinese names of Victoria Peak. This summit is the
+      highest point of Hong Kong Island. Because of the Humid and misty environment,
+      the densest forests on Hong Kong Island are concentrated on these hills.
     - Pok Fu Lam to Victoria Peak (Hong Kong Trail)
     - 
     - 
@@ -276,7 +159,10 @@ my_hikes:
     - 
     - 
     - 924.68 m
-    - 
+    - |-
+      Sunset Peak is the third highest peak of Hong Kong. On a grassy glade adjacent to Yi Tung Shan, there are 20 granite chalets rustic in appearance. Beyond the Nam Shan Management Centre, the trail skirts along the mid slopes of Sunset Peak. Exiting through Pak Kung Au, it joins Lantau Trail that leads to Lantau Peak and Ngong Ping. Pak Kung Au is a communication stronghold that links up south and north Lantau.
+
+      The trail crosses Tung Chung Road and trends down the southeastern face of Lantau Peak along the Tong Fuk Catchwater. This section overlooks the picturesque Cheng Sha Beach and Tong Fuk Village, and the Cha Kwo Chau, Shek Ku Chau and Soko Islands offshore.
     - Sunset Peak (Lantau trail)
     - 
     - 
@@ -295,7 +181,10 @@ my_hikes:
     - 
     - 
     - 304.07 m
-    - 
+    - |-
+      Section Three crosses some of Hong Kong's least visited uplands -- the hills and peaks between Pak Tam Au and Three Fathoms Cove (Kei Ling Ha Hoi). Here the Trail runs through Sai Kung West Country Park (3,000 hectares).
+
+      From Pak Tam Au the route climbs towards Ngam Tau Shan. Once in the uplands there are memorable views in almost every direction: east to the ocean coast, north across Tolo Channel, west to Tai Po, and south to Ma On Shan. Section Three includes some very strenuous climbs over three mountains, each almost 400 metres high: Wa Mei Shan, Lui Ta Shek, and Kai Kung Shan.
     - Sai Kung (Maclehose Stage 3)
     - 
     - 
@@ -314,7 +203,19 @@ my_hikes:
     - 
     - 
     - 307.14 m
-    - 
+    - Wang Pui Road marks the junction between Section 8 and Section 9 of the Lantau
+      Trail. Near here the dam of the Shek Pik Reservoir, a massive construction,
+      separates the reservoir from Shek Pik Prison. On the eastern end of the dam
+      there is an observation platform for sightseeing.. From the platform an overflow
+      channel can be seen, set a little above the normal water level. The overflow
+      channe's entry is 24 metres wide and, when the reservoir is full to maximum
+      capacity, a huge amount of water pours into it, making a thunderous noise and
+      making spray rise like mist. The path next to the Red Cross Shek Pik Youth Camp
+      is the continuation of the Lantau Trail. For 150 metres farther ahead there
+      is a wooden board giving the name of Shek Lam Chau Campsite. Offshore the most
+      south westerly part of Hong Kong, the Soko Islands lies a few kilometres away.
+      The Soko Islands are made up of numerous islands, islets and rocky outcrops.
+      Tai A Chau and Siu A Chau are the two largest islands.
     - Shek Pik to Tai O (Lantau Trail)
     - 
     - 
@@ -333,7 +234,20 @@ my_hikes:
     - 
     - 
     - 64.41 m
-    - 
+    - "The walk starts on the multicultural main street of Yung Shue Wan village.
+      Standing 71 metres tall, the striking Lamma wind turbines are accessible to
+      the public for free. Hung Shing Yeh’s powdery sands and clean water attracts
+      day -trippers from the downtown. Following the Family Walk you will soon reach
+      a pavilion that offers the chance for a breather as well as magnificent views
+      of Lantau Island and Cheung Chau in the distance. Just around a 15-minute walk
+      from the pavilion, you come to sandy Lo So Shing Beach. This was a lime producing
+      centre during the Tang dynasty (618-907). You can still find some ancient limekilns
+      here today. Just beyond this is Kamikaze Cave, where the Japanese forces occupying
+      Hong Kong during the Second World War launched speed boat suicide missions against
+      allied shipping. The trail ends in Sok Kwu Wan, a village where you can learn
+      about traditional fishing lifestyles, eat award-winning seafood and explore
+      a 150-year old Tin Hau temple. \n\nTip: much of this trail is not shaded. Be
+      prepared for exposure to sun, wind and rain."
     - 'Yung Shue Wan to Sok Kwu Wan (Lamma) '
     - 
     - 
@@ -352,7 +266,10 @@ my_hikes:
     - 
     - 
     - 6923.18 m
-    - 
+    - |-
+      A zippy, compact and incredibly scenic interval workout spread across three peaks. From Wong Nai Chung Gap, walk up towards Parkview - the red brick buildings and past an artificial lake (Wong Nai Chung Reservoir Park) on the right where you can see family or couples doing paddle boating . Stay on the same side as the lake , and walk up for 5-10 mins and you will then find an entrance on the right just before the Parkview. The map shows that you’re walking towards Violet Hill and Stanley – walk up and you will walk pass the side of Park View, and soon you’ll find yourself in the middle of nowhere, surrounded by mountains and valleys, with a view of many of the outlying islands that make up the territory. Most of the paths are concreted with clear signs.
+
+      The path leads to the Violet Hill top and then descends to Tsin Shui Wan Au. Everyone rests at this junction to prepare their next destination – Tai Tam Reservoir, Repulse Bay, or the Twins. Stay with the trail and climbing up the Thousand Steps to the Twin peaks to enjoy the whole view of Stanley.
     - Twin Peaks
     - 
     - 
@@ -361,3 +278,184 @@ my_hikes:
     - '4'
     - '2014-01-28 17:56:21.918121'
     - '2014-01-30 03:30:55.26853'
+
+---
+districts:
+  columns:
+  - id
+  - area
+  - aqi
+  - aqhi
+  - aqhi_health_risk
+  - aqi_url
+  - aqi_updated_on
+  - created_at
+  - updated_at
+  - api_id
+  - temp
+  records: 
+  - - '1'
+    - Tap Mun
+    - '74'
+    - '3'
+    - Low
+    - http://aqicn.org/city/hongkong/tapmun/
+    - 
+    - '2014-01-28 18:00:08.598595'
+    - '2014-03-19 16:56:49.830138'
+    - 
+    - 
+  - - '2'
+    - Central/Western
+    - '77'
+    - '4'
+    - Moderate
+    - http://aqicn.org/city/hongkong/central/western/
+    - 
+    - '2014-01-28 18:00:08.605942'
+    - '2014-03-20 06:45:09.056082'
+    - 
+    - 
+  - - '3'
+    - Central
+    - '76'
+    - '7'
+    - High
+    - http://aqicn.org/city/hongkong/central/
+    - 
+    - '2014-01-28 18:00:08.608637'
+    - '2014-03-20 06:45:09.094053'
+    - 
+    - 
+  - - '4'
+    - Causeway Bay
+    - '74'
+    - '6'
+    - Moderate
+    - http://aqicn.org/city/hongkong/causewaybay/
+    - 
+    - '2014-01-28 18:00:08.61126'
+    - '2014-03-20 06:45:09.091439'
+    - 
+    - 
+  - - '5'
+    - Mong Kok
+    - '90'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/mongkok/
+    - 
+    - '2014-01-28 18:00:08.613504'
+    - '2014-03-20 06:45:09.09639'
+    - 
+    - 
+  - - '6'
+    - Sham Shui Po
+    - '80'
+    - '4'
+    - Moderate
+    - http://aqicn.org/city/hongkong/shamshuipo/
+    - 
+    - '2014-01-28 18:00:08.616079'
+    - '2014-03-20 06:45:09.071297'
+    - 
+    - 
+  - - '7'
+    - Kwai Chung
+    - '72'
+    - '6'
+    - Moderate
+    - http://aqicn.org/city/hongkong/kwaichung/
+    - 
+    - '2014-01-28 18:00:08.618304'
+    - '2014-03-20 06:45:09.073461'
+    - 
+    - 
+  - - '8'
+    - Tai Po
+    - '75'
+    - '6'
+    - Moderate
+    - http://aqicn.org/city/hongkong/taipo/
+    - 
+    - '2014-01-28 18:00:08.620463'
+    - '2014-03-20 06:45:09.085564'
+    - 
+    - 
+  - - '9'
+    - Sha Tin
+    - '84'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/shatin/
+    - 
+    - '2014-01-28 18:00:08.622584'
+    - '2014-03-20 06:45:09.087947'
+    - 
+    - 
+  - - '10'
+    - Eastern
+    - '78'
+    - '3'
+    - Low
+    - http://aqicn.org/city/hongkong/eastern/
+    - 
+    - '2014-01-28 18:00:08.624773'
+    - '2014-03-20 06:45:09.066349'
+    - 
+    - 
+  - - '11'
+    - Tsuen Wan
+    - '75'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/tsuenwan/
+    - 
+    - '2014-01-28 18:00:08.626891'
+    - '2014-03-20 06:45:09.07584'
+    - 
+    - 
+  - - '12'
+    - Kwun Tong
+    - '72'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/kwuntong/
+    - 
+    - '2014-01-28 18:00:08.628922'
+    - '2014-03-20 06:45:09.069086'
+    - 
+    - 
+  - - '13'
+    - Yuen Long
+    - '77'
+    - '6'
+    - Moderate
+    - http://aqicn.org/city/hongkong/yuenlong/
+    - 
+    - '2014-01-28 18:00:08.630915'
+    - '2014-03-20 06:45:09.078383'
+    - 
+    - 
+  - - '14'
+    - Tuen Mun
+    - '69'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/tuenmun/
+    - 
+    - '2014-01-28 18:00:08.633006'
+    - '2014-03-20 06:45:09.080694'
+    - 
+    - 
+  - - '15'
+    - Tung Chung
+    - '69'
+    - '5'
+    - Moderate
+    - http://aqicn.org/city/hongkong/tungchung/
+    - 
+    - '2014-01-28 18:00:08.634931'
+    - '2014-03-20 06:45:09.083105'
+    - 
+    - 
