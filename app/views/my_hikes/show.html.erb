@@ -1,5 +1,4 @@
-
-  <div class="container">
+ <div class="container">
     <div class="hidescroll">
       <div class="innerscreen">
         <header class="clearfix">
@@ -12,35 +11,40 @@
 
         <main>
           <div class="map">
-            <iframe width="265px" height="220px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            <iframe width="285px" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             src="<%= @map_url %>">
             </iframe>
           </div>
   <!--         <div id="elevationgraph">
           </div> -->
+          <div class="meta">
+            <div class="metaitem freshness <%= "showaqi-level-" + ((@my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
+              <p>% freshness</p>
+              <span>
+                <% if @district.aqi %>
+                   <%= (( 1 - (@district.aqi.to_f/300) ) * 100).to_i %>
+                <% end %>
+              </span>
+            </div>
+            <div class="metaitem health risk <%= "showaqi-level-" + ((@my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
+              <p>Health risk:</p>
+              <span>
+                <% if @my_hike.parent.aqhi_health_risk %>
+                   <%= @my_hike.parent.aqhi_health_risk %>
+                <% end %>
+              </span>
+            </div> 
+            <div class="metaitem distance <%= "showaqi-level-" + ((@my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
+              <p>Distance:</p>
+              <span>
+                <% if @my_hike.distance_in_km %>
+                <%= @my_hike.distance_in_km %>km
+                <% end %>
+              </span> 
+            </div> 
+          </div>
           <div id="routehidescroll">
             <div class="route-details">
-              <div class="meta">
-                <div class="freshness <%= "showaqi-level-" + ((@my_hike.parent.aqi.to_i)/26 + 2).to_s %>">
-                  <span>
-                    <% if @district.aqi %>
-                       <%= (( 1 - (@district.aqi.to_f/300) ) * 100).to_i %>
-                    <% end %>
-                  </span>
-                  % freshness
-                </div>
-                <div class="health risk">
-                  <% if @my_hike.parent.aqhi_health_risk %>
-                     <%= @my_hike.parent.aqhi_health_risk %>
-                  <% end %>
-                </div> 
-                <% if @my_hike.distance_in_km %>
-                  <div class="distance">
-                     <span class="metalabels">Distance:</span><br>
-                    <%= @my_hike.distance_in_km %>km
-                  </div> 
-                <% end %>
-              </div>
               <div class="body">
                 <% if @district.area %>
                   <strong>District:</strong>

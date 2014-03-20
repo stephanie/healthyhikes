@@ -55,6 +55,7 @@ body {
     background-color: #f2f2f2;
     box-sizing: border-box;
     padding: 12px;
+    padding-bottom: 0px;
     overflow-y: scroll;
     margin-left: -2px;
     padding-right: 24px;
@@ -183,7 +184,7 @@ header #date {
 
 header #page-title-wrapper {
   height: 32px;
-  margin-top: 3px;
+  margin-top: -1px;
 }
 
 header #page-title-wrapper #page-title {
@@ -320,12 +321,6 @@ main #routes .route-wrapper .route .climb {
   right: 8px;
 }
 
-main #routes .route-wrapper .route .metalabels {
-  font-size: 13px;
-  padding-top: -14px;
-  color: #ecedea;
-}
-
 main #routes .route-wrapper .route .star {
   background-image: url('white-star.png');
   background-size: cover;
@@ -338,6 +333,7 @@ main #routes .route-wrapper .route .star {
 
 main .map {
   text-align: center;
+  margin-left: -6px;
 }
 
 main #hikemodemap {
@@ -350,83 +346,90 @@ main #hikemodemap {
 
 main .map iframe {
   margin-top: 15px;
-  border: 3px solid #cccccc;
+  /*border: 3px solid #cccccc;*/
   border-right: 3px solid #e8e8e8;
 }
 
 main .route-details {
-  margin-top: 8px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  margin-left: 4px;
   background-color: #3C4547;
   color: white;
-  font-size: 15px;
-  padding: 8px;
-  height: 200px;
-  width: 251px;
-  padding-right: 20px;
+  font-size: 16px;
+  height: 179px;
+  width: 273px;
+  padding: 15px 20px 10px 10px;
   overflow-y:scroll;
-  border: 3px solid #cccccc;
+  text-align: justify;
+  /*text-align: justify;*/
+  /*border: 3px solid #cccccc;*/
 }
+
+
+main .route-details .body .description {
+  margin-bottom: 12px;
+  width: 266px;
+}
+
 
 main #routehidescroll {
-  width: 270px;
+  width: 295px;
   overflow: hidden;
+  margin-left: -10px;
 }
-
-main .route-details .meta {
-  float: right;
-  width: 46px;
-  margin-right: 39px;
-  margin-left: 3px;
-  margin-bottom: 4px;
-}
-
-main .route-details .meta .freshness {
-  /*background-color: #39B54A;*/
-  /*background-color: #97D201;*/
-  border-radius: 4px;
-  display: inline-block;
-  padding: 4px;
-  width: 72px;
-  height: 72px;
-  text-align: center;
-  margin-bottom: 8px;
-  color: white;
-  font-family: Miso;
-  /*border: 2px solid #97D201;*/
-}
-
 
 strong {
-  /*color: #1eb0e9;*/
-  color: #1ebefc;
-  font-size: 15px;
+  color: #cdcdcd;
+  font-size: 16px;
   text-transform: uppercase;
   /*color: #a1a1a1;*/
 }
 
-main .route-details .meta .freshness span {
-  font-size: 65px;
-  display: block;
-  line-height: 52px;
-  padding-top: 5px;
+main #routes .route-wrapper .route .metalabels {
+  font-size: 13px;
+  padding-top: -14px;
+  color: #ecedea;
 }
 
-main .route-details .meta .distance {
-  /*background-color: #1B81AA;*/
-  border: 2px solid #1B81AA;
-  border-radius: 4px;
-  display: inline-block;
-  padding: 3px;
-  width: 75px;
-  text-align: center;
-  color: white;
-  padding-top: 6px;
+
+
+main .meta {
+  width: 294px;
+  height: 58px;
+  margin-left: -9px;
+  margin-top: -5px;
   font-family: Miso;
+  /*border: 2px solid #3C4547;*/
 }
 
-main .route-details .body .description {
-  margin-bottom: 12px;
+.metaitem {
+  float: left;
+  font-family: Miso;
+  text-align: center;
+  width: 93px;
+  height: 58px;
+  margin-top: 3px;
+  border-right: 1px solid #F2F2F2;
+  margin-left: 3px;
 }
+
+.metaitem p {
+  font-family: Miso;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.metaitem span {
+  font-size: 22px;
+}
+
+.metaitem.freshness span {
+  font-size: 28px;
+}
+
+
 
 .landing {
   width: 100%;
