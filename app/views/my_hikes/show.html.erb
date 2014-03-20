@@ -61,7 +61,7 @@
                   <%= @my_hike.duration %>
                   <br>
                 <% end %>
-                <% if @district.temp && @district.temp =! 0 %>
+                <% if @district.temp && @district.temp != 0 %>
                   <strong>Temperature:</strong>
                   <%= @district.temp %>°C
                 <% end %>
