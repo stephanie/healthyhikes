@@ -65,12 +65,10 @@
                   <strong>Temperature:</strong>
                   <%= @district.temp %>°C
                 <% end %>
-                <% if @district.aqi_updated_on %>
                   <div>
                   <strong> Freshness Factor:</strong> 
-                  <%= @district.aqi_updated_on %>
+                  <%= @district.aqi_updated_on %>Last
                   </div>
-                <% end %>
                 <br>
                 <% if @my_hike.description %>
                   <div class="description">
