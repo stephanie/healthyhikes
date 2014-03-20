@@ -37,9 +37,9 @@ gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'awesome_print'
 end
 
+gem 'awesome_print'
 gem 'whenever'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails_12factor', group: :production

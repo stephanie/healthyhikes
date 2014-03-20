@@ -20,7 +20,7 @@ class MyHikesController < ApplicationController
                 :temp => /\d./.match(data['collection2'][2]['property2'])[0].to_i
                 })
               district.save!
-              ap district             
+              # ap district             
               end
             }
         rescue SocketError => e
