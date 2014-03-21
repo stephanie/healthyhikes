@@ -8,12 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
 
  /*98D400*/
  /*39B54A*/
+
 
 @font-face {
     font-family: 'Miso';
@@ -221,7 +222,7 @@ header #page-title-wrapper .topnav {
 }
 
 header #page-title-wrapper #topnav-left {
-  background-image: url('backbutton1.png');
+  background-image: url('backbutton.png');
   left: 0px;
   top: -1px;
 }
@@ -333,7 +334,7 @@ main #routes .route-wrapper .route .star {
 
 main .map {
   text-align: center;
-  margin-left: -4px;
+  margin-left: -6px;
 }
 
 main #hikemodemap {
@@ -357,29 +358,28 @@ main .route-details {
   background-color: #06929F;
   color: white;
   font-size: 16px;
-  height: 166px;
-  width: 270px;
+  height: 174px;
+  width: 273px;
   padding: 15px 20px 10px 10px;
   overflow-y:scroll;
   text-align: justify;
   border-radius: 3px;
   /*text-align: justify;*/
-  border: 2px solid #01b3c3;
-}
-
-
-main #routehidescroll {
-  width: 289px;
-  overflow: hidden;
-  margin-left: -10px;
+  /*border: 3px solid #cccccc;*/
 }
 
 
 main .route-details .body .description {
   margin-bottom: 12px;
-  width: 260px;
+  width: 266px;
 }
 
+
+main #routehidescroll {
+  width: 291px;
+  overflow: hidden;
+  margin-left: -10px;
+}
 
 strong {
   color: #d9d9d9;
@@ -409,12 +409,12 @@ main .meta {
   float: left;
   font-family: Miso;
   text-align: center;
-  width: 89px;
+  width: 93px;
   height: 58px;
   margin-top: 3px;
+  border-right: 1px solid #F2F2F2;
   margin-left: 3px;
   border-radius: 3px;
-  border: 2px solid #dcdcdc;
 }
 
 .metaitem p {
@@ -647,3 +647,157 @@ main .meta {
 .hidescroll .innerscreen #indexactions {
   margin-right: -2px;
 }
+.aqi-level-1 {
+  background-color: #188a2b; }
+
+.aqi-level-2 {
+  background-color: #36b245; }
+
+.aqi-level-3 {
+  background-color: #60d758; }
+
+.aqi-level-4 {
+  background-color: #dfab32; }
+
+.aqi-level-5 {
+  background-color: #db7a2b; }
+
+.aqi-level-6 {
+  background-color: #c55624; }
+
+.aqi-level-7 {
+  background-color: #b22d1f; }
+
+.aqi-level-8 {
+  background-color: #7f2823; }
+
+.aqi-level-9 {
+  background-color: #612b1b; }
+
+.aqi-level-10 {
+  background-color: #401c12; }
+
+.aqi-level-11 {
+  background-color: black; }
+body {
+  background-color: #fff;
+  color: white;
+  font-family: 'Miso';
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: white; }
+  a:visited {
+    color: white; }
+    a:visited * {
+      color: white; }
+  a:hover {
+    color: #0055aa; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
+
+.aqi-level-1 {
+  background-color: #188a2b; }
+
+.aqi-level-2 {
+  background-color: #36b245; }
+
+.aqi-level-3 {
+  background-color: #7cc455; }
+
+.aqi-level-4 {
+  background-color: #dfab32; }
+
+.aqi-level-5 {
+  background-color: #db7a2b; }
+
+.aqi-level-6 {
+  background-color: #c55624; }
+
+.aqi-level-7 {
+  background-color: #b22d1f; }
+
+.aqi-level-8 {
+  background-color: #7f2823; }
+
+.aqi-level-9 {
+  background-color: #612b1b; }
+
+.aqi-level-10 {
+  background-color: #401c12; }
+
+.aqi-level-11 {
+  background-color: black; }
+
+.showaqi-level-1 {
+  background-color: #188a2b; }
+
+.showaqi-level-2 {
+  background-color: #36b245; }
+
+.showaqi-level-3 {
+  background-color: #7cc455; }
+
+.showaqi-level-4 {
+  background-color: #dfab32; }
+
+.showaqi-level-5 {
+  background-color: #db7a2b; }
+
+.showaqi-level-6 {
+  background-color: #c55624; }
+
+.showaqi-level-7 {
+  background-color: #b22d1f; }
+
+.showaqi-level-8 {
+  background-color: #7f2823; }
+
+.showaqi-level-9 {
+  background-color: #612b1b; }
+
+.showaqi-level-10 {
+  background-color: #401c12; }
+
+.showaqi-level-11 {
+  background-color: black; }
